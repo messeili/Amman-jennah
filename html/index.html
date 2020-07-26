@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/rest.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Amman Jennah</title>
+  </head>
+  <body>
+    <!-- Nav Bar begins -->
+    <div id="nav-container">
+      <nav>
+        <ul>
+          <div class="nav-logo">
+            <li>
+              <!-- Here You can put the logo -->
+            </li>
+          </div>
+          <div id="nav-items">
+            <li>Nav Item 1</li>
+            <li>Nav Item 2</li>
+            <li>Nav Item 3</li>
+            <li>Nav Item 4</li>
+          </div>
+          <div class="nav-logo">
+            <li>
+              <!-- Here you can put an Icon from fontawsome website -->
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </div>
+    <!-- Nav Bar Ends -->
+
+    <!-- This section contains Every thing -->
+    <section id="container">
+      <!-- Slider Start -->
+      <!-- Just add the pictuers it will work alone -->
+      <div class="mySlides" style="display: block;">
+        <img src="" alt="" />
+        <div class="mySlides-para">
+          <!-- The Text Of the Third iimages is here -->
+        </div>
+      </div>
+      <div class="mySlides" style="display: none;">
+        <img src="" alt="" />
+        <div class="mySlides-para">
+          <!-- The Text Of the Second iimages is here -->
+        </div>
+      </div>
+      <div class="mySlides" style="display: none;">
+        <img src="" alt="" />
+        <div class="mySlides-para">
+          <!-- The Text Of the Third iimages is here -->
+        </div>
+      </div>
+      <!-- Slider End -->
+
+      <!-- Location Section begins -->
+      <div class="location-container">
+        <div class="location-picture">
+          <!-- Image of the location -->
+          <div class="location-info">
+            <!-- Here is the infromation about the location -->
+          </div>
+        </div>
+        <div class="location-picture">
+          <!-- Image of the location -->
+          <div class="location-info">
+            <!-- Here is the infromation about the location -->
+          </div>
+        </div>
+        <div class="location-picture">
+          <!-- Image of the location -->
+          <div class="location-info">
+            <!-- Here is the infromation about the location -->
+          </div>
+        </div>
+      </div>
+      <!-- Location Section Ends -->
+      <footer>
+        <!-- Here you can Put a P List with our names on it with our GitHub Links -->
+      </footer>
+    </section>
+    <script>
+      var slides = document.getElementsByClassName("mySlides");
+      var myIndex = 0;
+      autoSlides();
+
+      function autoSlides() {
+        for (var i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > slides.length) {
+          myIndex = 1;
+        }
+        slides[myIndex - 1].style.display = "block";
+        setTimeout(autoSlides, 4000);
+      }
+    </script>
+  </body>
+</html>
