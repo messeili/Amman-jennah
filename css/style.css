@@ -133,72 +133,44 @@ footer p {
 }
 /* ----------------------location-section------------------------------ */
 .location-container {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 60px;
+  width: 100%;
+  background-color: black;
+  justify-content: space-evenly;
+  margin: 60px 0;
 }
 .location-picture {
   display: inline-block;
-  width: 30%;
-  background-color: black;
+  width: 20%;
+  background-color: white;
+  margin: 15px 0;
 }
 .location-picture img {
   width: 100%;
-  height: 400px;
-}
-#second-pic {
-  margin: auto 40px;
-}
-#fifth-pic {
-  margin: auto 40px;
-}
-#first-row {
-  margin-left: 40px;
-}
-
-#second-row {
-  margin-top: 100px;
-  margin-left: 40px;
-}
-
-.location-info {
-  margin-top: 30px;
+  height: 180px;
 }
 
 .location-info h3 {
   color: red !important;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 30px;
+  margin-top: 15px;
 
-  font-size: 25px;
-}
-.locationDate {
-  color: rgb(85, 80, 80) !important;
-  font-size: 25px !important;
-  margin-bottom: 30px;
-  opacity: 0.8;
+  font-size: 15px;
 }
 
 .location-info p {
-  font-size: 20px;
-  color: white;
-  margin-left: 20px;
-  letter-spacing: 3px;
-  margin-bottom: 30px;
+  font-size: 15px;
+  color: black;
+  margin: 15px;
 }
 
 .location-info button {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
-  padding: 10px 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
   background-color: rgb(139, 136, 136);
   color: white;
   transition: background 2s, border-radius 3s;
-  width: 160px;
+  width: 40%;
   overflow: hidden;
   -webkit-transition: width 1s ease-in-out;
   -moz-transition: width 1s ease-in-out;
@@ -209,16 +181,19 @@ footer p {
 .location-info button:hover {
   background: red;
   border-radius: 50px;
-  width: 100%;
+  width: 95%;
 }
 
 /* -slider-start */
-img {
+.mySlides img {
   width: 100%;
+  height: 480px;
 }
 
 .mySlides {
   position: relative;
+  width: 100%;
+  height: 480px;
 }
 
 .mySlides-para {
@@ -279,7 +254,7 @@ img {
   font-size: 20px;
 }
 
-a {
+nav a {
   display: inline-block;
   margin-right: 12%;
   text-decoration: none;
@@ -291,10 +266,10 @@ a {
   text-align: center;
   padding-bottom: 12px;
 }
-a:hover {
+nav a:hover {
   color: black;
 }
-a::before {
+nav a::before {
   content: "";
   position: absolute;
   text-align: center;
@@ -307,7 +282,7 @@ a::before {
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
 }
-a:hover::before {
+nav a:hover::before {
   visibility: visible;
   transform: scaleX(1);
 }
