@@ -1,199 +1,318 @@
+/* Location Page */
+#container {
+  width: 100%;
+}
+
+.mySlides {
+  position: relative;
+  color: white;
+  font-size: 25px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+  width: 100%;
+  height: 480px;
+}
+
+#img-background {
+  background-image: url("../img/rayyan-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  height: 100%;
+}
+
+.mySlides-para {
+  position: absolute;
+  text-transform: capitalize;
+  left: 50%;
+  bottom: 0;
+  line-height: 1.5;
+  font-weight: bold;
+  color: wheat;
+  transform: translate(-50%, 0%);
+  padding: 16px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.description-container {
+  margin: 60px 0;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.desc-form {
+  width: 30%;
+  margin: 60px 25px 0;
+}
+
+.desc-para {
+  width: 30%;
+  text-justify: auto;
+  line-height: 1.5;
+  align-self: center;
+  margin-right: 20px;
+}
+
+.desc-img-container {
+  width: 60%;
+  margin-left: 15px;
+}
+
+.desc-img-container img {
+  width: 25%;
+  height: 100%;
+  padding: 15px;
+}
+
+.images {
+  margin-bottom: 20px;
+}
+
+fieldset {
+  background-color: #eeeeee;
+  padding: 15px;
+  text-justify: auto;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+  margin: 0 auto;
+}
+
+input {
+  width: 50%;
+  padding: 5px;
+  margin: 5px 5px;
+  float: right;
+}
+
+label {
+  display: inline-block;
+  margin: 15px;
+  font-size: 20px;
+}
+
+input:last-child {
+  width: 25%;
+  display: block;
+  text-align: center;
+  color: white;
+  background-color: black;
+  margin: 5px auto;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: gray;
+  height: 100px;
+  position: relative;
+}
+
+footer p {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 0%);
+}
 /* ----------------------location-section------------------------------ */
-.location-container{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    
-
+.location-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
 }
-.location-picture{
-    display: inline-block;
-    width: 30%;
-    background-color: black;
+.location-picture {
+  display: inline-block;
+  width: 30%;
+  background-color: black;
 }
-.location-picture img{
-    width:100%;
-    height: 400px;
+.location-picture img {
+  width: 100%;
+  height: 400px;
 }
-#second-pic{
-    margin: auto 40px;
+#second-pic {
+  margin: auto 40px;
 }
-#fifth-pic{
-    margin: auto 40px;
+#fifth-pic {
+  margin: auto 40px;
 }
-#first-row{
-    margin-left: 40px;
+#first-row {
+  margin-left: 40px;
 }
 
-#second-row{
-    margin-top: 100px;
-    margin-left: 40px;
+#second-row {
+  margin-top: 100px;
+  margin-left: 40px;
 }
 
-.location-info{
-    margin-top: 30px;
+.location-info {
+  margin-top: 30px;
 }
 
-.location-info h3{
-    color: red !important;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 30px;
-   
-    font-size: 25px;
-} 
- .locationDate{
-    color: rgb(85, 80, 80) !important;
-    font-size: 25px !important;
-    margin-bottom: 30px;
-    opacity: 0.8;
-    
-} 
+.location-info h3 {
+  color: red !important;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
 
-.location-info p{
-   
-    font-size: 20px;
-    color: white;
-    margin-left: 20px;
-    letter-spacing: 3px;
-    margin-bottom: 30px;
-} 
-
-
-.location-info button{
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    background-color: rgb(139, 136, 136);
-    color: white;
-    transition: background 2s ,border-radius 3s;
-    width:160px;
-    overflow:hidden;
-    -webkit-transition: width 1s ease-in-out;
-    -moz-transition: width 1s ease-in-out;
-    -o-transition: width 1s ease-in-out;
-    transition: width 1s ease-in-out;
+  font-size: 25px;
+}
+.locationDate {
+  color: rgb(85, 80, 80) !important;
+  font-size: 25px !important;
+  margin-bottom: 30px;
+  opacity: 0.8;
 }
 
-.location-info button:hover{
-   
-   background: red;
-   border-radius: 50px;
-   width: 100%;
-   
-    
+.location-info p {
+  font-size: 20px;
+  color: white;
+  margin-left: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.location-info button {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: rgb(139, 136, 136);
+  color: white;
+  transition: background 2s, border-radius 3s;
+  width: 160px;
+  overflow: hidden;
+  -webkit-transition: width 1s ease-in-out;
+  -moz-transition: width 1s ease-in-out;
+  -o-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}
+
+.location-info button:hover {
+  background: red;
+  border-radius: 50px;
+  width: 100%;
 }
 
 /* -slider-start */
 img {
-
-    width: 100%;
+  width: 100%;
 }
 
 .mySlides {
-    position: relative;
-    
+  position: relative;
 }
 
-.mySlides-para  {
-    font-size: 25px;
-    position: absolute;
-    text-align: center;
-    left: 50%;
-    bottom: 4%;
-    font-weight: bolder;
-    color: orange;
-    text-shadow: 2px 2px 3px black ;
-    transform: translate(-50%, 0%);
-    padding: 16px;
-  
-      
-  }
-  /* -slider-end */
-@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
-#nav-container{
-    position: sticky;
-    top:0px;
-    z-index: 1;
-    background-color: whitesmoke;
-    box-shadow: 2px 2px 20px darkgrey;
-    width: 100%;
+.mySlides-para {
+  font-size: 25px;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  bottom: 4%;
+  font-weight: bolder;
+  color: orange;
+  text-shadow: 2px 2px 3px black;
+  transform: translate(-50%, 0%);
+  padding: 16px;
+}
+/* -slider-end */
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+#nav-container {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 20px darkgrey;
+  width: 100%;
 }
 
 .nav-logo img {
-   width: 180px;
-    display: inline-block;
-    text-align: right;
+  width: 180px;
+  display: inline-block;
+  text-align: right;
 }
-.nav-logo{
-    width: 20%;
-    text-align: left;
-    display: inline-block;
-    vertical-align: middle;
-    padding-top: 0.6%;
-    padding-bottom: 0.6%;
+.nav-logo {
+  width: 20%;
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 0.6%;
+  padding-bottom: 0.6%;
 }
-.nav-flag{
-    width: 15%;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: right;
+.nav-flag {
+  width: 15%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
 }
 .nav-flag img {
-    width: 30px;
-    vertical-align: text-top;
+  width: 30px;
+  vertical-align: text-top;
 }
 .nav-flag li {
-    display: inline-block;
-    text-decoration: none;
-    vertical-align: middle;
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
 }
 .nav-flag p {
-    font-family: 'Cairo', sans-serif;
-    vertical-align: text-top;
-    display: inline-block;
-    font-size: 20px;
+  font-family: "Cairo", sans-serif;
+  vertical-align: text-top;
+  display: inline-block;
+  font-size: 20px;
 }
 
-a{
-    display: inline-block;
-    margin-right: 12%;
-    text-decoration: none;
-    color: black;
-    font-size: 25px;
-    font-family: 'Cairo', sans-serif;
-    position: relative;
-    text-decoration: none;
-    text-align: center;
-    padding-bottom: 12px;
+a {
+  display: inline-block;
+  margin-right: 12%;
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  font-family: "Cairo", sans-serif;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  padding-bottom: 12px;
 }
-a:hover{
-    color:black;
+a:hover {
+  color: black;
 }
-a::before{
-    content: "";
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    height: 3px;
-    bottom: 0;
-    
-    background-color:aqua;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out 0s;
+a::before {
+  content: "";
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
 
+  background-color: aqua;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
 }
-a:hover::before{
-    visibility: visible;
-    transform: scaleX(1);
+a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
 }
-#nav-items{
-    width: 60%;
-    display: inline-block;
-    vertical-align: middle;
-       
+#nav-items {
+  width: 60%;
+  display: inline-block;
+  vertical-align: middle;
 }
