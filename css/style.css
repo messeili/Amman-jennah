@@ -1,3 +1,30 @@
+
+/* -slider-start */
+img {
+
+    width: 100%;
+}
+
+.mySlides {
+    position: relative;
+    
+}
+
+.mySlides-para  {
+    font-size: 25px;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: 4%;
+    font-weight: bolder;
+    color: orange;
+    text-shadow: 2px 2px 3px black ;
+    transform: translate(-50%, 0%);
+    padding: 16px;
+  
+      
+  }
+  /* -slider-end */
 @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 #nav-container{
     position: sticky;
