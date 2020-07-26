@@ -153,7 +153,7 @@ footer p {
 }
 
 .location-info h3 {
-  color: red !important;
+  color: orange !important;
   font-weight: bold;
   text-align: center;
   margin-top: 15px;
@@ -210,12 +210,12 @@ footer p {
 /* -slider-end */
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
 #nav-container {
-  position: sticky;
-  top: 0px;
-  z-index: 1;
-  background-color: whitesmoke;
-  box-shadow: 2px 2px 20px darkgrey;
   width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .nav-logo img {
@@ -257,7 +257,7 @@ nav a {
   display: inline-block;
   margin-right: 12%;
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 25px;
   font-family: "Cairo", sans-serif;
   position: relative;
