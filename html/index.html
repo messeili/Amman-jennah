@@ -42,6 +42,7 @@
     <!-- This section contains Every thing -->
     <section id="container">
       <!-- Slider Start -->
+      <!-- Just add the pictuers it will work alone -->
       <div class="mySlides" style="display: block;">
         <img src="" alt="" />
         <div class="mySlides-para">
@@ -88,5 +89,22 @@
         <!-- Here you can Put a P List with our names on it with our GitHub Links -->
       </footer>
     </section>
+    <script>
+      var slides = document.getElementsByClassName("mySlides");
+      var myIndex = 0;
+      autoSlides();
+
+      function autoSlides() {
+        for (var i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > slides.length) {
+          myIndex = 1;
+        }
+        slides[myIndex - 1].style.display = "block";
+        setTimeout(autoSlides, 4000);
+      }
+    </script>
   </body>
 </html>
