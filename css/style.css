@@ -112,3 +112,19 @@ input:last-child {
   background-color: black;
   margin: 5px auto;
 }
+
+footer {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: gray;
+  height: 100px;
+  position: relative;
+}
+
+footer p {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 0%);
+}
