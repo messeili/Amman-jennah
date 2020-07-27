@@ -14,20 +14,15 @@ function autoSlides() {
   setTimeout(autoSlides, 4000);
 }
 
+var imgContainer = document.getElementById("location-container");
 
-
-var imgContainer = document.getElementById('location-container');
-
-imgContainer.addEventListener('click',() => {
-  var clickedID = event.target.id
+imgContainer.addEventListener("click", () => {
+  var clickedID = event.target.id;
   //if clickID"the event click" not equal;"doesnt touch" the imgcontaine"locationcontainer=>the whole div
-  if (clickedID != imgContainer.id){
-  //event.target.id =} give me the id||class||alt||anything i can target of the thing i clciked on
-  var id = event.target.alt.split("@")[1];
-  console.log(event.target.alt.split('@'));
-  localStorage.setItem('clicked', id);
-
+  if (clickedID != imgContainer.id) {
+    //event.target.id =} give me the id||class||alt||anything i can target of the thing i clciked on
+    var id = event.target.alt.split("@")[1];
+    console.log(event.target.alt.split("@"));
+    localStorage.setItem("clicked", id);
   }
 });
-
-
