@@ -107,8 +107,8 @@ function generateChart() {
       },
     },
   });
-  myChart.canvas.parentNode.style.height = "400px";
-  myChart.canvas.parentNode.style.width = "900px";
+  myChart.canvas.parentNode.style.height = "100%";
+  myChart.canvas.parentNode.style.width = "50%";
 }
 
 function generate() {
