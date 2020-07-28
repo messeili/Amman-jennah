@@ -133,21 +133,26 @@ iframe {
 	width: 200px;
 	height: 200px;
 	text-align: center;
-	margin-left: 300px;
+	margin-left: 375px;
 	box-shadow: 15px 15px rgba(59, 53, 53, 0.158);
+}
+
+.contact p{
+  margin: 20px;
 }
 
 .social {
 	display: inline-block;
 	height: 50px;
-	width: 50px;
+  width: 50px;
+  margin: 10px;
 }
 
 .img1 {
 	display: inline-block;
 	width: 200px;
 	height: 150px;
-	margin-left: 150px;
+	margin-left: 320px;
 	
 }
 
@@ -161,19 +166,33 @@ div .footer-section1-map {
 	margin: 10px;
 
 }
+.footer-section1 h1{
+  color: rgb(56, 56, 240);
+  font-weight: bold;
+}
+.footer-section1 p,h1{
+margin: 20px;}
 
 .footer-bottom {
 	padding: 20px;
-	color: rgb(255, 255, 255);
+	color: white;
 	text-align: center;
 	background-color: rgba(0, 0, 0);
+}
+.footer-bottom a{
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+.footer-bottom a:hover{
+  color: blue;
 }
 
 .find {
 	margin-bottom: 10px;
 	font-size: xx-large;
 	color: rgb(255, 255, 255);
-	margin-left: 150px;
+	margin-left: 240px;
 }
 
 .footh1 {
