@@ -1,4 +1,7 @@
 var clickedLocation = localStorage.getItem("clicked");
+
+var formSubmit = document.querySelector("form");
+
 var counter = 0;
 
 var imagesContainer = document.getElementsByClassName("images");
@@ -34,11 +37,37 @@ function generateBackground() {
   backGround.style.backgroundImage = `url('${newBackGround}')`;
 }
 
+function loadLocationArray() {
+  Locations.all[clickedLocation].usersArray =
+    JSON.parse(localStorage.getItem(Locations.all[clickedLocation].name)) || [];
+}
+
 function generate() {
   generateImages();
   generateDescription();
   generateTitle();
   generateBackground();
+  loadLocationArray();
 }
 
 generate();
+
+formSubmit.addEventListener("submit", function () {
+  event.preventDefault();
+  var name = document.querySelector("input[type='text']");
+  var nameValue = name.value;
+  var date = document.querySelector("input[type='date']");
+  var dateValue = date.value;
+  var numberOfVisitors = document.querySelector("input[type='number']");
+  var numberValue = numberOfVisitors.value;
+
+  var Info = new FormInfo(nameValue, dateValue, numberValue);
+  Locations.all[clickedLocation].usersArray.push(Info);
+  localStorage.setItem(
+    Locations.all[clickedLocation].name,
+    JSON.stringify(Locations.all[clickedLocation].usersArray)
+  );
+  name.value = "";
+  date.value = "";
+  numberOfVisitors.value = "";
+});
