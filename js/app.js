@@ -39,7 +39,7 @@ function Locations(name, mainImg, pathArr, description) {
   this.mainImg = `../img/${mainImg}`;
   this.pathArr = pathArr;
   this.description = description;
-
+  this.usersArray = [];
   Locations.all.push(this);
 }
 
@@ -55,3 +55,9 @@ for (let index = 0; index < locationNames.length; index++) {
 console.log(Locations.all);
 
 console.log(Locations.all[0].pathArr);
+
+function FormInfo(name, date, numberOfVisitors) {
+  this.name = name;
+  this.date = date;
+  this.numberOfVisitors = numberOfVisitors;
+}
