@@ -18,6 +18,7 @@ var imgContainer = document.getElementById("location-container");
 
 imgContainer.addEventListener("click", () => {
   var clickedID = event.target.id;
+  console.log(event.target.alt);
   //if clickID"the event click" not equal;"doesnt touch" the imgcontaine"locationcontainer=>the whole div
   if (clickedID != imgContainer.id) {
     //event.target.id =} give me the id||class||alt||anything i can target of the thing i clciked on
