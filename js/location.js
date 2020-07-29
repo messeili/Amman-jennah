@@ -25,6 +25,11 @@ function generateDescription() {
   var newDesc = Locations.all[clickedLocation].description;
   desc.innerHTML = newDesc;
 }
+function generateMap() {
+  var maps = document.getElementById("Map");
+  var newMap = Locations.all[clickedLocation].location;
+  maps.innerHTML = newMap;
+}
 
 function generateTitle() {
   var locationName = document.getElementById("location-name");
@@ -103,6 +108,7 @@ function generate() {
   generateTitle();
   generateBackground();
   loadLocationArray();
+  generateMap();
 }
 
 generate();
