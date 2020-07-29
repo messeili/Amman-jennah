@@ -51,16 +51,6 @@
       </div>
 
       <div class="description-container row">
-        <div class="desc-img-container column">
-          <div class="row images">
-            <img src="../img/hotel-img1.png" alt="" />
-            <img src="../img/hotel-img2.png" alt="" />
-          </div>
-          <div class="row images">
-            <img src="../img/hotel-img3.png" alt="" />
-            <img src="../img/hotel-img4.png" alt="" />
-          </div>
-        </div>
         <div class="desc-para">
           <p id="description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
@@ -76,8 +66,20 @@
             sapiente quos qui, quis alias quisquam.
           </p>
         </div>
+        <div class="desc-img-container row">
+          <div class="column images">
+            <img src="../img/hotel-img1.png" alt="" />
+            <img src="../img/hotel-img2.png" class="extra" alt="" />
+          </div>
+          <div class="column images">
+            <img src="../img/hotel-img3.png" class="extra" alt="" />
+            <img src="../img/hotel-img4.png" alt="" />
+          </div>
+        </div>
       </div>
-      <div id="chartContainer"> <canvas id="myChart"></canvas></div>
+      <div id="chartContainer" style="display: none;">
+        <canvas id="myChart"></canvas>
+      </div>
       <div class="desc-form column">
         <form>
           <fieldset>
@@ -136,6 +138,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
     <script src="../js/app.js"></script>
     <script src="../js/location.js"></script>
-   
   </body>
 </html>

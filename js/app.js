@@ -30,7 +30,17 @@ var locationImg = [
 var paragArray = [
   "first location paragraph",
   "second location paragraph",
-  "third location paragraph",
+  `<p>Located next to the Al Hussein Public Parks, the museum was established in 2003 upon King Abdullah's wishes. The museum showcases a rare collection of Jordan's vehicles ranging from Hussein bin Ali's cars that came to Amman in 1916 to modern sports cars.</p> 
+  <p>The museum has the rover used in filming of Hollywood's movie The Martian, which used Jordan's UNESCO world heritage site Wadi Rum as the backdrop for the Martian scenes. The rover was gifted to Jordan in return for the hospitality with which Jordan received the movie cast and crew.</p>
+  <p>There is a plethora of motorcycles, as <b>King Hussein</b> and his son, the current King Abdullah II, were motorcycle enthusiasts, many of which are rare examples of vintage US and British bikes in pristine condition.</p>
+  <p> Some of the best cars.</p>
+  <ol>
+    <li> <a href="https://www.facebook.com/TheRoyalAutomobileMuseumJordan/photos/a.580816995331045/2790331461046243/?type=3&theater" target="_blank">AC Cobra 1990</a>  </li> 
+    <li> <a href="https://www.facebook.com/TheRoyalAutomobileMuseumJordan/photos/a.580816995331045/2794314417314614/?type=3&theater" target="_blank">Sheer rover 1984</a>  </li> 
+    <li> <a href="https://www.facebook.com/TheRoyalAutomobileMuseumJordan/photos/a.275438299202251/1978738765538854/?type=3&theater" target="_blank">Bugatti 1957</a>  </li> 
+    <li> <a href="https://www.facebook.com/TheRoyalAutomobileMuseumJordan/photos/a.275438299202251/1851794278233304/?type=3&theater" target="_blank">Aston martin db5 1963</a>  </li>
+  </ol> 
+  `,
   "fourth location paragraph",
   "fifth location paragraph",
 ];

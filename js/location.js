@@ -1,13 +1,16 @@
 var clickedLocation = localStorage.getItem("clicked");
 
 var formSubmit = document.querySelector("form");
-var chartContainer=document.getElementById("chartContainer");
+var chartContainer = document.getElementById("chartContainer");
+
+console.log(chartContainer);
 
 var counter = 0;
-var dateArr=[];
-var visitorsArr=[];
+var dateArr = [];
+var visitorsArr = [];
+var randomColors = [];
 var imagesContainer = document.getElementsByClassName("images");
-var ctx = document.getElementById('myChart');
+var ctx = document.getElementById("myChart");
 
 function generateImages() {
   for (var i = 0; i < imagesContainer.length; i++) {
@@ -49,58 +52,69 @@ function generateBackground() {
 function loadLocationArray() {
   Locations.all[clickedLocation].usersArray =
     JSON.parse(localStorage.getItem(Locations.all[clickedLocation].name)) || [];
+
+  if (Locations.all[clickedLocation].usersArray.length > 0) {
+    chartContainer.style.display = "block";
+    gitChartData();
+    generateChart();
+  }
 }
 
-function gitChartData(){
-  dateArr=[];
-  visitorsArr=[];
-  var tempArr=Locations.all[clickedLocation].usersArray;
-for (let index = 0; index <tempArr.length ; index++) {
-  dateArr.push(tempArr[index].date);
-  visitorsArr.push(tempArr[index].numberOfVisitors);
-
+function gitChartData() {
+  dateArr = [];
+  visitorsArr = [];
+  var tempArr = Locations.all[clickedLocation].usersArray;
+  for (let index = 0; index < tempArr.length; index++) {
+    dateArr.push(tempArr[index].date);
+    visitorsArr.push(tempArr[index].numberOfVisitors);
+  }
 }
 
-}
+function getRandomColor() {
+  var letters = "0123456789ABCDEF";
 
+  for (var j = 0; j < Locations.all[clickedLocation].usersArray.length; j++) {
+    var color = "#";
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    randomColors.push(color);
+  }
+}
 
 function generateChart() {
-  
+  getRandomColor();
+  console.log(randomColors);
+  var locationName = Locations.all[clickedLocation].name;
   var myChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-          labels: dateArr,
-          datasets: [{
-              label: '###',
-              data: visitorsArr,
-              backgroundColor: 
-                  '#f73859',
+    type: "bar",
+    data: {
+      labels: dateArr,
+      datasets: [
+        {
+          label: locationName,
+          data: visitorsArr,
+          backgroundColor: randomColors,
 
-              
-              borderColor: [
-                  'rgba(255, 99, 132, 1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(75, 192, 192, 1)',
-                  'rgba(153, 102, 255, 1)',
-                  'rgba(255, 159, 64, 1)'
-              ],
-              borderWidth: 1
+          borderColor: "#000000",
+          borderWidth: 2,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
           },
-          ]
+        ],
       },
-      options: {
-          scales: {
-              yAxes: [{
-                  ticks: {
-                      beginAtZero: true
-                  }
-              }]
-          }
-      }
+    },
   });
-  myChart.canvas.parentNode.style.height = '400px';
-myChart.canvas.parentNode.style.width = '900px';
+  myChart.canvas.parentNode.style.height = "100%";
+  myChart.canvas.parentNode.style.width = "50%";
 }
 
 function generate() {
@@ -113,7 +127,6 @@ function generate() {
 }
 
 generate();
-
 
 formSubmit.addEventListener("submit", function () {
   event.preventDefault();
@@ -134,6 +147,7 @@ formSubmit.addEventListener("submit", function () {
   date.value = "";
   numberOfVisitors.value = "";
   gitChartData();
- 
+
   generateChart();
+  chartContainer.style.display = "block";
 });
