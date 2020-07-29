@@ -9,6 +9,7 @@ var counter = 0;
 var dateArr = [];
 var visitorsArr = [];
 var randomColors = [];
+var sumArr = [];
 var imagesContainer = document.getElementsByClassName("images");
 var ctx = document.getElementById("myChart");
 
@@ -50,13 +51,20 @@ function generateBackground() {
 }
 
 function loadLocationArray() {
-  Locations.all[clickedLocation].usersArray =
-    JSON.parse(localStorage.getItem(Locations.all[clickedLocation].name)) || [];
+  // Locations.all[clickedLocation].usersArray =
+  //   JSON.parse(localStorage.getItem(Locations.all[clickedLocation].name)) || [];
+
+  for (var i = 0; i < Locations.all.length; i++) {
+    Locations.all[i].usersArray =
+      JSON.parse(localStorage.getItem(Locations.all[i].name)) || [];
+  }
 
   if (Locations.all[clickedLocation].usersArray.length > 0) {
     chartContainer.style.display = "block";
-    gitChartData();
-    generateChart();
+    // gitChartData();
+    getNumberOfVisitors();
+    generateChartMain();
+    // generateChart();
   }
 }
 
@@ -70,10 +78,24 @@ function gitChartData() {
   }
 }
 
+function getNumberOfVisitors() {
+  sumArr = [];
+  for (let index = 0; index < Locations.all.length; index++) {
+    console.log(sumArr);
+    var sumOfNumbers = 0;
+    for (var i = 0; i < Locations.all[index].usersArray.length; i++) {
+      sumOfNumbers += parseInt(
+        Locations.all[index].usersArray[i].numberOfVisitors
+      );
+    }
+    sumArr.push(sumOfNumbers);
+  }
+}
+
 function getRandomColor() {
   var letters = "0123456789ABCDEF";
 
-  for (var j = 0; j < Locations.all[clickedLocation].usersArray.length; j++) {
+  for (var j = 0; j < Locations.all.length; j++) {
     var color = "#";
     for (var i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
@@ -94,6 +116,41 @@ function generateChart() {
         {
           label: locationName,
           data: visitorsArr,
+          backgroundColor: randomColors,
+
+          borderColor: "#000000",
+          borderWidth: 2,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
+    },
+  });
+  myChart.canvas.parentNode.style.height = "100%";
+  myChart.canvas.parentNode.style.width = "50%";
+}
+
+function generateChartMain() {
+  getRandomColor();
+  console.log(randomColors);
+  var locationName = Locations.all[clickedLocation].name;
+  var myChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: locationNames,
+      datasets: [
+        {
+          label: "locationName",
+          data: sumArr,
           backgroundColor: randomColors,
 
           borderColor: "#000000",
@@ -146,8 +203,9 @@ formSubmit.addEventListener("submit", function () {
   name.value = "";
   date.value = "";
   numberOfVisitors.value = "";
-  gitChartData();
-
-  generateChart();
+  // gitChartData();
+  getNumberOfVisitors();
+  generateChartMain();
+  // generateChart();
   chartContainer.style.display = "block";
 });

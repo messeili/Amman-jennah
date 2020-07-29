@@ -1,22 +1,22 @@
 /* Location Page */
-@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
-html{
+@import url("https://fonts.googleapis.com/css2?family=Jockey+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap");
+html {
   margin: 0;
   padding: 0;
 }
 
 #container {
   width: 100%;
-  
 }
-.mySlides::after{
-  background-image: url('../img/gradient-reversed.png');
+/* Footer content */
+.mySlides::after {
+  background-image: url("../img/gradient-reversed.png");
   opacity: 0.6;
-  content: '';
+  content: "";
   right: 0px;
   top: 0;
-  border-radius: 8px;;
+  border-radius: 8px;
   bottom: 0;
   width: 100%;
   position: absolute;
@@ -32,7 +32,7 @@ html{
   width: 100%;
   height: 480px;
 }
-.mySlides img{
+.mySlides img {
   object-fit: cover;
 }
 
@@ -57,16 +57,15 @@ html{
   z-index: 2;
 }
 
- .row {
+.row {
   display: flex;
   flex-direction: row;
- 
-} 
+}
 
- .column {
+.column {
   display: flex;
   flex-direction: column;
-} 
+}
 
 .description-container {
   margin: 60px 0;
@@ -169,82 +168,81 @@ input:last-child {
 }
 /* Footer */
 footer {
-  		padding: 20px;
- 		color: white;
- 		background-color: rgba(26, 23, 23, 0.842);	
-}	
+  padding: 20px;
+  color: white;
+  background-color: rgba(26, 23, 23, 0.842);
+}
 
+iframe {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin-left: 375px;
+  box-shadow: 15px 15px rgba(59, 53, 53, 0.158);
+}
 
-	iframe {
- 		display: inline-block;
-  		width: 200px;
-  		height: 200px;
-	text-align: center;
-	margin-left: 375px;
-	box-shadow: 15px 15px rgba(59, 53, 53, 0.158);
-}	
-
-.contact p{
+.contact p {
   margin: 20px;
 }
 
 .social {
-	display: inline-block;
-	height: 50px;
+  display: inline-block;
+  height: 50px;
   width: 50px;
   margin: 10px;
 }
 
 .img1 {
-	display: inline-block;
-	width: 200px;
-	height: 150px;
-	margin-left: 320px;
-
+  display: inline-block;
+  width: 200px;
+  height: 150px;
+  margin-left: 320px;
 }
 
 div .footer-section1-map {
-	display: inline-block;
+  display: inline-block;
 }
 
 .footer-section1 {
-	display: inline-block;
-	font-size: large;
-	margin: 10px;
-
+  display: inline-block;
+  font-size: large;
+  margin: 10px;
 }
-.footer-section1 h1{
+.footer-section1 h1 {
   color: rgb(56, 56, 240);
   font-weight: bold;
 }
-.footer-section1 p,h1{
-margin: 20px;}
+.footer-section1 p,
+h1 {
+  margin: 20px;
+}
 
 .footer-bottom {
-	padding: 20px;
-	color: white;
-	text-align: center;
-	background-color: rgba(0, 0, 0);
+  padding: 20px;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0);
 }
-.footer-bottom a{
+.footer-bottom a {
   color: white;
   font-size: 20px;
   text-decoration: none;
 }
-.footer-bottom a:hover{
+.footer-bottom a:hover {
   color: blue;
 }
 
 .find {
-	margin-bottom: 10px;
-	font-size: xx-large;
-	color: rgb(255, 255, 255);
-	margin-left: 240px;
+  margin-bottom: 10px;
+  font-size: xx-large;
+  color: rgb(255, 255, 255);
+  margin-left: 240px;
 }
 
 .footh1 {
-	font-size: xx-large;
-	margin: 10px;
+  font-size: xx-large;
+  margin: 10px;
 }
 
 /* ----------------------location-section------------------------------ */
@@ -254,9 +252,6 @@ margin: 20px;}
   background-color: white;
   margin: 60px auto;
   padding: 0;
-  
-
-  
 }
 .location-picture {
   display: inline-block;
@@ -265,15 +260,12 @@ margin: 20px;}
   z-index: 2;
   background-size: cover;
   margin: 18px;
-
-
 }
 .location-picture img {
   width: 100%;
   height: 450px;
   border-radius: 7px;
   object-fit: cover;
-  
 }
 
 .location-info h3 {
@@ -282,16 +274,14 @@ margin: 20px;}
   text-align: left;
   font-size: 25px;
   text-transform: uppercase;
-  font-family: 'PT Serif', serif;
+  font-family: "PT Serif", serif;
   display: inline-block;
   margin: 0;
   position: absolute;
   bottom: 5px;
   left: 23%;
-
- 
 }
-.location-info{
+.location-info {
   font-size: 100px;
   position: absolute;
   text-align: center;
@@ -302,9 +292,8 @@ margin: 20px;}
   transform: translate(-50%, 0%);
   width: 100%;
   z-index: 2;
-  
 }
-.location-info img{
+.location-info img {
   width: 40px;
   height: 40px;
   display: inline-block;
@@ -313,7 +302,7 @@ margin: 20px;}
   vertical-align: middle;
   position: absolute;
   bottom: 0;
-  left: 13%
+  left: 13%;
 }
 
 /* .location-picture::after{
@@ -327,8 +316,6 @@ margin: 20px;}
   position: absolute;
   background-size: cover;
 } */
-
-
 
 .location-info button {
   font-size: 15px;
