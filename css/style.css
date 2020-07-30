@@ -487,9 +487,7 @@ nav a {
   text-align: center;
   padding-bottom: 12px;
 }
-nav a:hover {
-  color: black;
-}
+
 nav a::before {
   content: "";
   position: absolute;

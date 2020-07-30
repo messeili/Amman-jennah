@@ -3,7 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/rest.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <title>Admin System</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Nav Bar begins -->
+    <header>
+      <div id="nav-container">
+        <nav>
+          <div class="nav-logo">
+            <img src="../img/logo.png" alt="logo" />
+          </div>
+          <div id="nav-items">
+            <a href="../html/index.html">Home</a>
+            <a href="#location-container">Add Location</a>
+          </div>
+          <div class="nav-flag">
+            <li>
+              <img src="../img/jordan flag.png" alt="" />
+            </li>
+            <li>
+              <p>Jordan</p>
+            </li>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Nav Bar Ends -->
+    <table id="locations-info">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/admin.js"></script>
+  </body>
 </html>
