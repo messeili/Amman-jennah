@@ -26,14 +26,14 @@
             <a href="../html/index.html">About</a>
             <a href="#location-container">Locations</a>
             <a href="#contact-us">Contact Us</a>
-            <button id="static">Statistics</button>
-            <button class="open-button" onclick="openForm()">Open Form</button>
+            <a><button class="static">Statistics</button></a>
           </div>
           <div class="nav-flag">
             <li>
-              <img src="../img/jordan flag.png" alt="" />
+              <button class="static" onclick="openForm()">Login</button>
             </li>
             <li>
+              <img src="../img/jordan flag.png" alt="" />
               <p>Jordan</p>
             </li>
           </div>
@@ -74,30 +74,27 @@
       <!-- Slider End -->
 
       <!-- Admin form -->
-      <div class="form-popup" id="myForm">
-        <form
-          id="admin-form"
-          action="../html/admin.html"
-          class="form-container"
-          onsubmit="return adminValidate()"
-        >
-          <h1>Login</h1>
+      <div id="form-container">
+        <div class="form-content" id="myForm">
+          <span id="close">&times;</span>
+          <form
+            id="admin-form"
+            action="../html/admin.html"
+            class="form-container"
+            onsubmit="return adminValidate()"
+          >
+            <h2>Login</h2>
 
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required />
+            <label for="email"></label>
+            <input type="text" placeholder="Username" name="email" required />
 
-          <label for="psw"><b>Password</b></label>
-          <input
-            type="password"
-            placeholder="Enter Password"
-            name="psw"
-            required
-          />
-          <button type="submit" class="btn">Login</button>
-          <button type="button" class="btn cancel" onclick="closeForm()">
-            Close
-          </button>
-        </form>
+            <label for="psw"></label>
+            <input type="password" placeholder="Password" name="psw" required />
+            <p>Your username/password is incorrect</p>
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn" id="btn-cancel">Close</button>
+          </form>
+        </div>
       </div>
       <!-- Admin Form -->
 

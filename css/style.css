@@ -1,6 +1,7 @@
 /* Location Page */
 @import url("https://fonts.googleapis.com/css2?family=Jockey+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
 html {
   margin: 0;
   padding: 0;
@@ -57,46 +58,37 @@ html {
   z-index: 2;
 }
 
-/* Adming Log in */
-/* Button used to open the contact form - fixed at the bottom of the page */
-.open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  right: 0px;
-  width: 280px;
-  top: 0px;
-}
-
-/* The popup form - hidden by default */
-.form-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-
-/* Add styles to the form container */
 .form-container {
   max-width: 300px;
   padding: 10px;
   background-color: white;
 }
 
+.form-content {
+  /* position: fixed; */
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  text-align: center;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: fit-content;
+  height: fit-content;
+}
+
 /* Full-width input fields */
 .form-container input[type="text"],
 .form-container input[type="password"] {
-  width: 100%;
+  width: 80%;
   padding: 15px;
-  margin: 5px 0 22px 0;
+  margin: 22px 0 22px 0;
   border: none;
   background: #f1f1f1;
+  margin-top: 10%;
+}
+.form-container input[type="password"] {
+  margin-top: 5%;
 }
 
 /* When the inputs get focus, do something */
@@ -104,22 +96,31 @@ html {
 .form-container input[type="password"]:focus {
   background-color: #ddd;
   outline: none;
+  font-family: "Cairo", sans-serif;
 }
 
 /* Set a style for the submit/login button */
 .form-container .btn {
   background-color: #4caf50;
   color: white;
-  padding: 16px 20px;
+  padding: 8px 20px;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 50%;
   margin-bottom: 10px;
   opacity: 0.8;
+  font-size: 20px;
+  font-family: "Cairo", sans-serif;
+}
+.form-container p {
+  color: red;
+  font-family: "Cairo", sans-serif;
+  padding-bottom: 15px;
+  display: none;
 }
 
 /* Add a red background color to the cancel button */
-.form-container .cancel {
+.form-container #btn-cancel {
   background-color: red;
 }
 
@@ -127,6 +128,10 @@ html {
 .form-container .btn:hover,
 .open-button:hover {
   opacity: 1;
+}
+h2 {
+  font-size: 50px;
+  font-family: "Cairo", sans-serif;
 }
 /* Adming log in */
 
@@ -196,7 +201,7 @@ html {
   text-decoration: none;
 }
 
-fieldset {
+#user-form fieldset {
   background-color: #eeeeee;
   padding: 15px;
   text-justify: auto;
@@ -210,27 +215,27 @@ legend {
   padding: 5px 10px;
   margin: 0 auto;
 }
-
-input {
-  width: 40%;
-  padding: 5px;
-  margin: 5px 5px;
-  float: right;
-}
-
-label {
+#submitBtn {
+  width: 50% !important;
   display: inline-block;
-  margin: 15px;
-  font-size: 20px;
-}
-
-input:last-child {
-  width: 25%;
-  display: block;
-  text-align: center;
+  text-align: center !important;
   color: white;
   background-color: black;
   margin: 5px auto;
+  font-size: 20px;
+}
+
+#user-form input {
+  width: 100%;
+  padding: 5px;
+  margin: 10px 5px;
+  text-align: left;
+}
+
+#user-form label {
+  display: inline-block;
+  margin: 10px;
+  font-size: 20px;
 }
 
 #chartContainer {
@@ -430,7 +435,7 @@ h1 {
   padding: 16px;
 }
 /* -slider-end */
-@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+
 #nav-container {
   width: 100%;
   position: absolute;
@@ -454,7 +459,7 @@ h1 {
   padding-bottom: 0.6%;
 }
 .nav-flag {
-  width: 15%;
+  width: 18%;
   display: inline-block;
   vertical-align: middle;
   text-align: right;
@@ -467,12 +472,21 @@ h1 {
   display: inline-block;
   text-decoration: none;
   vertical-align: middle;
+  border: 2px solid whitesmoke;
+  margin-right: 18%;
+  padding: 2%;
+  border-radius: 10px;
 }
+.nav-flag li:nth-of-type(2) {
+  padding: 3%;
+}
+
 .nav-flag p {
   font-family: "Cairo", sans-serif;
   vertical-align: text-top;
   display: inline-block;
   font-size: 20px;
+  color: whitesmoke;
 }
 
 nav a {
@@ -494,27 +508,50 @@ nav a::before {
   text-align: center;
   width: 100%;
   height: 3px;
-  bottom: 0;
-
+  bottom: 0px;
   background-color: aqua;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
 }
+
 nav a:hover::before {
   visibility: visible;
   transform: scaleX(1);
 }
+
 #nav-items {
   width: 60%;
   display: inline-block;
   vertical-align: middle;
 }
 
-#static {
+.static {
   background-color: transparent;
   border: none;
   color: white;
   font-size: 25px;
+  cursor: pointer;
+}
+
+#form-container {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 4; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+#close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
   cursor: pointer;
 }
