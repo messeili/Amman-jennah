@@ -36,12 +36,24 @@ imgContainer.addEventListener("click", () => {
   }
 });
 
+var formContainer = document.getElementById("form-container");
+var closeTheForm = document.getElementById("close");
+var btnCancel = document.getElementById("btn-cancel");
 function openForm() {
-  document.getElementById("myForm").style.display = "block";
+  formContainer.style.display = "block";
+  closeTheForm.addEventListener("click", closeForm);
+  window.addEventListener("click", closeForm);
+  btnCancel.addEventListener("click", closeForm);
 }
 
 function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+  if (
+    event.target == formContainer ||
+    event.target == closeTheForm ||
+    event.target == btnCancel
+  ) {
+    formContainer.style.display = "none";
+  }
 }
 
 function adminValidate() {
@@ -52,7 +64,7 @@ function adminValidate() {
     return true;
   } else {
     // Change it to P with color red
-    alert("Your UserName/Password is wrong");
+    document.querySelector(".form-container p").style.display = "block";
     return false;
   }
 }

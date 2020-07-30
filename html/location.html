@@ -24,14 +24,12 @@
           <div id="nav-items">
             <a href="../html/index.html">Home</a>
             <a href="../html/index.html">About</a>
-            <a href="#location-container">Locations</a>
-            <a href="#location-container">Contact Us</a>
+            <a href="#contact-us">Contact Us</a>
+            <a><button class="static">Statistics</button></a>
           </div>
           <div class="nav-flag">
             <li>
               <img src="../img/jordan flag.png" alt="" />
-            </li>
-            <li>
               <p>Jordan</p>
             </li>
           </div>
@@ -78,16 +76,41 @@
         </div>
       </div>
       <div class="desc-form column">
-        <form>
+        <form id="user-form">
           <fieldset>
             <legend>Register Form!!</legend>
-            <label for="fullName">Full Name : </label>
-            <input type="text" name="fullName" id="fullName" />
-            <label for="date">Date Of Visit : </label>
-            <input type="date" name="data" id="date" />
-            <label for="number">Number Of Visitors : </label>
-            <input type="number" name="number" id="number" />
-            <input type="submit" value="Save Info" />
+            <table>
+              <tr>
+                <td>
+                  <label for="fullName">Full Name : </label>
+                </td>
+                <td>
+                  <input type="text" name="fullName" id="fullName" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="date">Date Of Visit : </label>
+                </td>
+                <td>
+                  <input type="date" name="data" id="date" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="number">Number Of Visitors : </label>
+                </td>
+                <td>
+                  <input type="number" name="number" id="number" />
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <input id="submitBtn" type="submit" value="Save Info" />
+                </td>
+              </tr>
+            </table>
           </fieldset>
         </form>
       </div>
@@ -148,6 +171,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
     <script src="../js/app.js"></script>
+    <script src="../js/index.js"></script>
     <script src="../js/location.js"></script>
   </body>
 </html>
