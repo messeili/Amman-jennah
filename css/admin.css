@@ -79,3 +79,19 @@ nav a:hover::before {
   display: inline-block;
   vertical-align: middle;
 }
+
+/* Table */
+
+table {
+  margin: 150px 15px;
+}
+
+table thead th {
+  padding: 15px;
+  border: 1px black solid;
+}
+
+table tbody td {
+  padding: 15px;
+  border: 1px black solid;
+}
