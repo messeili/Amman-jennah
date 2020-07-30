@@ -1,6 +1,7 @@
 var slides = document.getElementsByClassName("mySlides");
 var myIndex = 0;
 var adminForm = document.getElementById("admin-form");
+var stButton = document.getElementById("static");
 var admin = {
   userName: "admin1",
   password: "12345",
@@ -55,3 +56,11 @@ function adminValidate() {
     return false;
   }
 }
+
+stButton.addEventListener("click", function () {
+  console.log("clicked");
+
+  var div = document.getElementById("chartContainer");
+  console.log(div);
+  div.style.display = "block";
+});
