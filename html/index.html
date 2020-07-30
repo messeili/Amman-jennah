@@ -26,6 +26,8 @@
             <a href="../html/index.html">About</a>
             <a href="#location-container">Locations</a>
             <a href="#contact-us">Contact Us</a>
+            <button id="static">Statistics</button>
+            <button class="open-button" onclick="openForm()">Open Form</button>
           </div>
           <div class="nav-flag">
             <li>
@@ -71,58 +73,99 @@
 
       <!-- Slider End -->
 
+      <!-- Admin form -->
+      <div class="form-popup" id="myForm">
+        <form
+          id="admin-form"
+          action="../html/admin.html"
+          class="form-container"
+          onsubmit="return adminValidate()"
+        >
+          <h1>Login</h1>
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required />
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+          <button type="submit" class="btn">Login</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">
+            Close
+          </button>
+        </form>
+      </div>
+      <!-- Admin Form -->
+
       <!-- Location Section begins -->
-      <div id="location-container" class="location-container-one ">
+      <div id="location-container" class="location-container-one">
         <div class="location-picture column">
           <!-- Image of the location -->
-          <a href="../html/location.html"><img src="../img/sheta-2.jpg" alt="sheta@0"/></a>
+          <a href="../html/location.html"
+            ><img src="../img/sheta-2.jpg" alt="sheta@0"
+          /></a>
           <div class="location-info">
             <!-- Here is the infromation about the location -->
-            <img src="../img/pin.png" alt="sheta@0">
+            <img src="../img/pin.png" alt="sheta@0" />
             <h3>THE WINTER VALLY</h3>
-            
           </div>
         </div>
         <div class="location-picture">
           <!-- Image of the location -->
-          <a href="../html/location.html"><img src="../img/bahat-2.jpg" alt="bahat@1"/></a>
+          <a href="../html/location.html"
+            ><img src="../img/bahat-2.jpg" alt="bahat@1"
+          /></a>
           <div class="location-info">
             <!-- Here is the infromation about the location -->
-            <img src="../img/pin.png" alt="bahat@1">
+            <img src="../img/pin.png" alt="bahat@1" />
             <h3>AL-BAHHATH SPRING</h3>
           </div>
         </div>
         <div class="location-picture column">
-          <a href="../html/location.html"><img src="../img/car-2.jpg" alt="car@2"/></a>
+          <a href="../html/location.html"
+            ><img src="../img/car-2.jpg" alt="car@2"
+          /></a>
           <!-- Image of the location -->
           <div class="location-info">
             <!-- Here is the infromation about the location -->
-            <img src="../img/pin.png" alt="car@2">
+            <img src="../img/pin.png" alt="car@2" />
             <h3>ROYAL Car MUSEUM</h3>
           </div>
         </div>
         <div class="location-picture column">
-          <a href="../html/location.html"><img src="../img/sadTalal-1.jpg" alt="sadTalal@3"/></a>
+          <a href="../html/location.html"
+            ><img src="../img/sadTalal-1.jpg" alt="sadTalal@3"
+          /></a>
           <!-- Image of the location -->
           <div class="location-info">
             <!-- Here is the infromation about the location -->
-            <img src="../img/pin.png" alt="sadTalal@3">
+            <img src="../img/pin.png" alt="sadTalal@3" />
             <h3>King Talal Dam</h3>
-           
           </div>
         </div>
         <div class="location-picture column">
-          <a href="../html/location.html"><img src="../img/rayyan-1.jpg" alt="rayyan@4"></a>
+          <a href="../html/location.html"
+            ><img src="../img/rayyan-1.jpg" alt="rayyan@4"
+          /></a>
           <!-- Image of the location -->
           <div class="location-info">
             <!-- Here is the infromation about the location -->
-            <img src="../img/pin.png" alt="rayyan@4">
+            <img src="../img/pin.png" alt="rayyan@4" />
             <h3>Alrayyan Vally</h3>
-           
           </div>
         </div>
       </div>
       <!-- Location Section Ends -->
+      <!-- Chart -->
+
+      <div id="chartContainer" style="display: none;">
+        <canvas id="myChart"></canvas>
+      </div>
+      <!-- Chart -->
       <footer>
         <div class="footer-content">
           <div class="footer-section1">
@@ -131,42 +174,65 @@
               Contact Information:
             </p>
             <div class="contact">
-              <p> +962-7999-9999-99</p>
-              <p> &nbsp; info@Tetra.com</p>
+              <p>+962-7999-9999-99</p>
+              <p>&nbsp; info@Tetra.com</p>
             </div>
             <div>
-              <a class="b" href="https://facebook.com"><img class="social"
+              <a class="b" href="https://facebook.com"
+                ><img
+                  class="social"
                   src="https://cdn2.iconfinder.com/data/icons/social-media-2199/64/social_media_isometric_1-facebook-512.png"
-                  alt=""></a>
-              <a class="b" href="https://twitter.com"><img class="social"
+                  alt=""
+              /></a>
+
+              <a class="b" href="https://twitter.com"
+                ><img
+                  class="social"
                   src="https://cdn2.iconfinder.com/data/icons/social-media-2199/64/social_media_isometric_6-twitter-512.png"
-                  alt=""></a>
-              <a class="b" href="https://youtube.com"><img class="social"
+                  alt=""
+              /></a>
+
+              <a class="b" href="https://youtube.com"
+                ><img
+                  class="social"
                   src="https://cdn2.iconfinder.com/data/icons/social-media-2199/64/social_media_isometric_2-youtube-512.png"
-                  alt=""></a>
+                  alt=""
+              /></a>
             </div>
           </div>
           <div class="footer-section1-map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.319914211971!2d35.8663810146408!3d31.897904135594967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca6e3c8e41335%3A0x38b7f4b7f0dc25d0!2sLuminus%20College!5e0!3m2!1sen!2sjo!4v1587282960933!5m2!1sen!2sjo"
-              width="400" height="300" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              width="400"
+              height="300"
+              frameborder="0"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+            ></iframe>
           </div>
           <div class="footer-section1">
             <h3 class="find">Download the application</h3>
             <div class="apps">
-              <a href=""><img class="img1"
+              <a href=""
+                ><img
+                  class="img1"
                   src="https://3.bp.blogspot.com/-zxXOgeQ5-0A/XD5vwB4CtTI/AAAAAAAAG4c/fFMrXH-ZFZkkVlzkgB6dvRJMUwfDgACWACK4BGAYYCw/s640/Icons%2BApp%2BStore%2BGoogle%2Bplay.png"
-                  alt="app store">
+                  alt="app store"
+                />
               </a>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
-         <a href="https://github.com/tetra-team/Amman-jennah">2020@Tetra Team.com</a>
+          <a href="https://github.com/tetra-team/Amman-jennah"
+            >2020@Tetra Team.com</a
+          >
         </div>
       </footer>
     </section>
     <script src="../js/app.js"></script>
+    <script src="../js/location.js"></script>
     <script src="../js/index.js"></script>
   </body>
 </html>
