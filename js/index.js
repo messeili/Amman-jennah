@@ -1,5 +1,12 @@
 var slides = document.getElementsByClassName("mySlides");
 var myIndex = 0;
+var adminForm = document.getElementById("admin-form");
+var admin = {
+  userName: "admin1",
+  password: "12345",
+};
+
+localStorage.setItem("adminInfo", JSON.stringify(admin));
 autoSlides();
 
 function autoSlides() {
@@ -27,3 +34,24 @@ imgContainer.addEventListener("click", () => {
     localStorage.setItem("clicked", id);
   }
 });
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function adminValidate() {
+  var admin = JSON.parse(localStorage.getItem("adminInfo"));
+  var userN = document.querySelector("input[type='text']");
+  var pass = document.querySelector("input[type='password']");
+  if (userN.value == admin.userName && pass.value == admin.password) {
+    return true;
+  } else {
+    // Change it to P with color red
+    alert("Your UserName/Password is wrong");
+    return false;
+  }
+}
