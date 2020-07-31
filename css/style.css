@@ -688,6 +688,7 @@ nav a:hover::before {
   font-weight: bold;
   cursor: pointer;
 }
+/* ------------fotter2--------------- */
 .Maps{
    width: 500px;
   height: 260px; 
@@ -717,3 +718,4 @@ nav a:hover::before {
   flex-direction: column;
   
 }
+/* ------------end fotter2--------------- */
