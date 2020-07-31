@@ -329,6 +329,9 @@ section {
 }
 
 /* Footer Center */
+#envlop:hover{
+  color: red;
+}
 
 .footer-distributed .footer-center{
 	width: 35%;
@@ -687,9 +690,12 @@ nav a:hover::before {
 }
 .Maps{
    width: 500px;
-  height: 100%; 
+  height: 260px; 
   /* text-align: center; */
   /* display: inline-block; */
+  box-shadow: rgb(196, 193, 193) 5px 5px;
+   border: solid 1px black; 
+
 }
 .desc-form column{
   /* display: inline-block; */
@@ -705,8 +711,9 @@ nav a:hover::before {
 #Map{
   /* height: 275px; */
   width: 35%;
-  margin: 60px 25px;
+  margin: 73px 50px 60px 200px;
   display: flex;
   vertical-align: baseline;
   flex-direction: column;
+  
 }
