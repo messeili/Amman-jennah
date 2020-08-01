@@ -3,13 +3,9 @@ var clickedLocation = localStorage.getItem("clicked");
 var formSubmit = document.querySelector("form");
 var chartContainer = document.getElementById("chartContainer");
 
-console.log(chartContainer);
+var locationsArray = JSON.parse(localStorage.getItem("locations"));
 
 var counter = 0;
-var dateArr = [];
-var visitorsArr = [];
-var randomColors = [];
-var sumArr = [];
 var imagesContainer = document.getElementsByClassName("images");
 var ctx = document.getElementById("myChart");
 
@@ -17,7 +13,7 @@ function generateImages() {
   for (var i = 0; i < imagesContainer.length; i++) {
     for (var j = 0; j < imagesContainer[i].children.length; j++) {
       var oldImage = imagesContainer[i].children[j].attributes[0];
-      var newImage = `../img/${Locations.all[clickedLocation].pathArr[counter]}`;
+      var newImage = `../img/${locationsArray[clickedLocation].pathArr[counter]}`;
       oldImage.value = newImage;
       counter++;
     }
@@ -26,160 +22,50 @@ function generateImages() {
 
 function generateDescription() {
   var desc = document.getElementById("description");
-  var newDesc = Locations.all[clickedLocation].description;
+  var newDesc = locationsArray[clickedLocation].description;
   desc.innerHTML = newDesc;
 }
 
 function generateMap() {
   var maps = document.getElementById("Map");
-  var newMap = Locations.all[clickedLocation].location;
+  var newMap = locationsArray[clickedLocation].location;
   maps.innerHTML = newMap;
 }
 
 function generateTitle() {
   var locationName = document.getElementById("location-name");
   var title = document.querySelector("title");
-  var newName = Locations.all[clickedLocation].name;
+  var newName = locationsArray[clickedLocation].name;
   locationName.innerHTML = newName;
   title.innerHTML = newName;
 }
 
 function generateBackground() {
   var backGround = document.getElementById("img-background");
-  var newBackGround = Locations.all[clickedLocation].mainImg;
+  var newBackGround = locationsArray[clickedLocation].mainImg;
   backGround.style.backgroundImage = `url('${newBackGround}')`;
 }
 
 function loadLocationArray() {
-  // Locations.all[clickedLocation].usersArray =
-  //   JSON.parse(localStorage.getItem(Locations.all[clickedLocation].name)) || [];
-
-  for (var i = 0; i < Locations.all.length; i++) {
-    Locations.all[i].usersArray =
-      JSON.parse(localStorage.getItem(Locations.all[i].name)) || [];
-  }
-
-  if (Locations.all[clickedLocation].usersArray.length > 0) {
-    chartContainer.style.display = "block";
-    // gitChartData();
-    getNumberOfVisitors();
-    generateChartMain();
-    // generateChart();
+  for (var i = 0; i < locationsArray.length; i++) {
+    locationsArray[i].usersArray =
+      JSON.parse(localStorage.getItem(locationsArray[i].name)) || [];
   }
 }
 
-function gitChartData() {
-  dateArr = [];
-  visitorsArr = [];
-  var tempArr = Locations.all[clickedLocation].usersArray;
-  for (let index = 0; index < tempArr.length; index++) {
-    dateArr.push(tempArr[index].date);
-    visitorsArr.push(tempArr[index].numberOfVisitors);
-  }
-}
-
-function getNumberOfVisitors() {
-  sumArr = [];
-  for (let index = 0; index < Locations.all.length; index++) {
-    console.log(sumArr);
-    var sumOfNumbers = 0;
-    for (var i = 0; i < Locations.all[index].usersArray.length; i++) {
-      sumOfNumbers += parseInt(
-        Locations.all[index].usersArray[i].numberOfVisitors
-      );
-    }
-    sumArr.push(sumOfNumbers);
-  }
-}
-
-function getRandomColor() {
-  var letters = "0123456789ABCDEF";
-
-  for (var j = 0; j < Locations.all.length; j++) {
-    var color = "#";
-    for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    randomColors.push(color);
-  }
-}
-
-function generateChart() {
-  getRandomColor();
-  console.log(randomColors);
-  var locationName = Locations.all[clickedLocation].name;
-  var myChart = new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: dateArr,
-      datasets: [
-        {
-          label: locationName,
-          data: visitorsArr,
-          backgroundColor: randomColors,
-
-          borderColor: "#000000",
-          borderWidth: 2,
-        },
-      ],
-    },
-    options: {
-      scales: {
-        yAxes: [
-          {
-            ticks: {
-              beginAtZero: true,
-            },
-          },
-        ],
-      },
-    },
-  });
-  myChart.canvas.parentNode.style.height = "100%";
-  myChart.canvas.parentNode.style.width = "50%";
-}
-
-function generateChartMain() {
-  getRandomColor();
-  console.log(randomColors);
-  var locationName = Locations.all[clickedLocation].name;
-  var myChart = new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: locationNames,
-      datasets: [
-        {
-          label: "locationName",
-          data: sumArr,
-          backgroundColor: randomColors,
-
-          borderColor: "#000000",
-          borderWidth: 2,
-        },
-      ],
-    },
-    options: {
-      scales: {
-        yAxes: [
-          {
-            ticks: {
-              beginAtZero: true,
-            },
-          },
-        ],
-      },
-    },
-  });
-  myChart.canvas.parentNode.style.height = "100%";
-  myChart.canvas.parentNode.style.width = "50%";
+function loadArary() {
+  Locations.all[clickedLocation].usersArray =
+    JSON.parse(localStorage.getItem(locationsArray[clickedLocation].name)) ||
+    [];
 }
 
 function generate() {
+  loadLocationArray();
   generateImages();
   generateDescription();
   generateTitle();
   generateBackground();
-  loadLocationArray();
+  loadArary();
   generateMap();
 }
 
@@ -203,9 +89,4 @@ formSubmit.addEventListener("submit", function () {
   name.value = "";
   date.value = "";
   numberOfVisitors.value = "";
-  // gitChartData();
-  getNumberOfVisitors();
-  generateChartMain();
-  // generateChart();
-  chartContainer.style.display = "block";
 });
