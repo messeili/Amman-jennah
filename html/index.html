@@ -76,7 +76,7 @@
       <!-- Admin form -->
       <div id="form-container">
         <div class="form-content" id="myForm">
-          <span id="close">&times;</span>
+          <span id="closeform">&times;</span>
           <form
             id="admin-form"
             action="../html/admin.html"
@@ -101,57 +101,67 @@
       <!-- Location Section begins -->
       <div id="location-container" class="location-container-one">
         <div class="location-picture column">
-          <!-- Image of the location -->
-          <a href="../html/location.html"
+          <!-- Hidden Image for the link -->
+          <a class="opacity-img" href="../html/location.html"
             ><img src="../img/sheta-2.jpg" alt="sheta@0"
           /></a>
+          <!-- Image of the location -->
+          <img src="../img/sheta-2.jpg" />
+          <!-- Here is the infromation about the location -->
           <div class="location-info">
-            <!-- Here is the infromation about the location -->
             <img src="../img/pin.png" alt="sheta@0" />
             <h3>THE WINTER VALLY</h3>
           </div>
         </div>
         <div class="location-picture">
-          <!-- Image of the location -->
-          <a href="../html/location.html"
+          <!-- Hidden Image for the link -->
+          <a class="opacity-img" href="../html/location.html"
             ><img src="../img/bahat-2.jpg" alt="bahat@1"
           /></a>
+          <!-- Image of the location -->
+          <img src="../img/bahat-2.jpg" />
+          <!-- Here is the infromation about the location -->
           <div class="location-info">
-            <!-- Here is the infromation about the location -->
-            <img src="../img/pin.png" alt="bahat@1" />
+            <img src="../img/pin.png" />
             <h3>AL-BAHHATH SPRING</h3>
           </div>
         </div>
         <div class="location-picture column">
-          <a href="../html/location.html"
+          <!-- Hidden Image for the link -->
+          <a class="opacity-img" href="../html/location.html"
             ><img src="../img/car-2.jpg" alt="car@2"
           /></a>
           <!-- Image of the location -->
+          <img src="../img/car-2.jpg" />
+          <!-- Here is the infromation about the location -->
           <div class="location-info">
-            <!-- Here is the infromation about the location -->
-            <img src="../img/pin.png" alt="car@2" />
+            <img src="../img/pin.png" />
             <h3>ROYAL Car MUSEUM</h3>
           </div>
         </div>
         <div class="location-picture column">
-          <a href="../html/location.html"
-            ><img src="../img/sadTalal-1.jpg" alt="sadTalal@3"
+          <!-- Hidden Image for the link -->
+          <a class="opacity-img" href="../html/location.html"
+            ><img src="../img/sheta-2.jpg" alt="sadTalal@3"
           /></a>
-          <!-- Image of the location -->
+          <!-- Here is the infromation about the location -->
+          <img src="../img/sadTalal-1.jpg" />
+          <!-- Here is the infromation about the location -->
           <div class="location-info">
-            <!-- Here is the infromation about the location -->
-            <img src="../img/pin.png" alt="sadTalal@3" />
+            <img src="../img/pin.png" />
             <h3>King Talal Dam</h3>
           </div>
         </div>
         <div class="location-picture column">
-          <a href="../html/location.html"
-            ><img src="../img/rayyan-1.jpg" alt="rayyan@4"
+          <!-- Hidden Image for the link -->
+          <a class="opacity-img" href="../html/location.html"
+            ><img src="../img/sheta-2.jpg" alt="rayyan@4"
           /></a>
           <!-- Image of the location -->
+          <img src="../img/rayyan-1.jpg" />
+          <!-- Here is the infromation about the location -->
           <div class="location-info">
-            <!-- Here is the infromation about the location -->
-            <img src="../img/pin.png" alt="rayyan@4" />
+            <img src="../img/pin.png" />
             <h3>Alrayyan Vally</h3>
           </div>
         </div>
@@ -160,7 +170,10 @@
       <!-- Chart -->
 
       <div id="chartContainer" style="display: none;">
-        <canvas id="myChart"></canvas>
+        <div id="chart-content">
+          <span id="closechart">&times;</span>
+          <canvas id="myChart"></canvas>
+        </div>
       </div>
       <!-- Chart -->
       <footer class="footer-distributed">
