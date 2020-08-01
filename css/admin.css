@@ -80,10 +80,45 @@ nav a:hover::before {
   vertical-align: middle;
 }
 
+/* Container */
+#container {
+  width: 100%;
+}
+
+#table-container {
+  width: 50%;
+  justify-content: center;
+  margin: 150px auto;
+  border: 1px solid black;
+  padding: 15px;
+}
+
+#table-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px;
+  justify-content: space-evenly;
+}
+
+#table-control button {
+  padding: 5px;
+  font-size: 15px;
+  color: black;
+  border-radius: 25%;
+  box-shadow: 5px 5px #000000;
+}
+
+#location-name {
+  text-align: center;
+  margin: 15px;
+  text-transform: capitalize;
+}
+
 /* Table */
 
 table {
-  margin: 150px 15px;
+  margin: 0px auto;
 }
 
 table thead th {
