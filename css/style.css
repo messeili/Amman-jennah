@@ -64,7 +64,8 @@ html {
   background-color: white;
 }
 
-.form-content {
+.form-content,
+#chart-content {
   /* position: fixed; */
   border: 3px solid #f1f1f1;
   z-index: 9;
@@ -383,17 +384,17 @@ h1 {
   left: 13%;
 }
 
-/* .location-picture::after{
-  background-image: url('../img/gradient.png');
-  content: '';
+.location-picture::after {
+  background-image: url("../img/gradient.png");
+  content: "";
   right: 0px;
   top: 0;
-  border-radius: 8px;;
+  border-radius: 8px;
   bottom: 0;
   width: 100%;
   position: absolute;
   background-size: cover;
-} */
+}
 
 .location-info button {
   font-size: 15px;
@@ -534,7 +535,8 @@ nav a:hover::before {
   cursor: pointer;
 }
 
-#form-container {
+#form-container,
+#chartContainer {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 4; /* Sit on top */
@@ -548,10 +550,17 @@ nav a:hover::before {
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
-#close {
+#closeform,
+#closechart {
   color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.opacity-img {
+  opacity: 0;
+  position: absolute;
+  z-index: 5;
 }
