@@ -74,9 +74,9 @@ for (let index = 0; index < locationNames.length; index++) {
     map[index]
   );
 }
-console.log(Locations.all);
 
-console.log(Locations.all[0].pathArr);
+// Store the whole array in localStorage.
+localStorage.setItem("locations", JSON.stringify(Locations.all));
 
 function FormInfo(name, date, numberOfVisitors) {
   this.name = name;

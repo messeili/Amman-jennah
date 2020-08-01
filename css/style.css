@@ -241,6 +241,7 @@ legend {
 
 #chartContainer {
   width: 100%;
+  margin-bottom: 50px;
 }
 #myChart {
   margin: 0 50%;
@@ -535,8 +536,15 @@ nav a:hover::before {
   cursor: pointer;
 }
 
-#form-container,
-#chartContainer {
+#static-graph {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#form-container {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 4; /* Sit on top */

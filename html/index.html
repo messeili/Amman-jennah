@@ -26,7 +26,7 @@
             <a href="../html/index.html">About</a>
             <a href="#location-container">Locations</a>
             <a href="#contact-us">Contact Us</a>
-            <a><button class="static">Statistics</button></a>
+            <button id="static-graph">Statistics</button>
           </div>
           <div class="nav-flag">
             <li>
@@ -99,81 +99,12 @@
       <!-- Admin Form -->
 
       <!-- Location Section begins -->
-      <div id="location-container" class="location-container-one">
-        <div class="location-picture column">
-          <!-- Hidden Image for the link -->
-          <a class="opacity-img" href="../html/location.html"
-            ><img src="../img/sheta-2.jpg" alt="sheta@0"
-          /></a>
-          <!-- Image of the location -->
-          <img src="../img/sheta-2.jpg" />
-          <!-- Here is the infromation about the location -->
-          <div class="location-info">
-            <img src="../img/pin.png" alt="sheta@0" />
-            <h3>THE WINTER VALLY</h3>
-          </div>
-        </div>
-        <div class="location-picture">
-          <!-- Hidden Image for the link -->
-          <a class="opacity-img" href="../html/location.html"
-            ><img src="../img/bahat-2.jpg" alt="bahat@1"
-          /></a>
-          <!-- Image of the location -->
-          <img src="../img/bahat-2.jpg" />
-          <!-- Here is the infromation about the location -->
-          <div class="location-info">
-            <img src="../img/pin.png" />
-            <h3>AL-BAHHATH SPRING</h3>
-          </div>
-        </div>
-        <div class="location-picture column">
-          <!-- Hidden Image for the link -->
-          <a class="opacity-img" href="../html/location.html"
-            ><img src="../img/car-2.jpg" alt="car@2"
-          /></a>
-          <!-- Image of the location -->
-          <img src="../img/car-2.jpg" />
-          <!-- Here is the infromation about the location -->
-          <div class="location-info">
-            <img src="../img/pin.png" />
-            <h3>ROYAL Car MUSEUM</h3>
-          </div>
-        </div>
-        <div class="location-picture column">
-          <!-- Hidden Image for the link -->
-          <a class="opacity-img" href="../html/location.html"
-            ><img src="../img/sheta-2.jpg" alt="sadTalal@3"
-          /></a>
-          <!-- Here is the infromation about the location -->
-          <img src="../img/sadTalal-1.jpg" />
-          <!-- Here is the infromation about the location -->
-          <div class="location-info">
-            <img src="../img/pin.png" />
-            <h3>King Talal Dam</h3>
-          </div>
-        </div>
-        <div class="location-picture column">
-          <!-- Hidden Image for the link -->
-          <a class="opacity-img" href="../html/location.html"
-            ><img src="../img/sheta-2.jpg" alt="rayyan@4"
-          /></a>
-          <!-- Image of the location -->
-          <img src="../img/rayyan-1.jpg" />
-          <!-- Here is the infromation about the location -->
-          <div class="location-info">
-            <img src="../img/pin.png" />
-            <h3>Alrayyan Vally</h3>
-          </div>
-        </div>
-      </div>
+      <div id="location-container" class="location-container-one"></div>
       <!-- Location Section Ends -->
       <!-- Chart -->
 
       <div id="chartContainer" style="display: none;">
-        <div id="chart-content">
-          <span id="closechart">&times;</span>
-          <canvas id="myChart"></canvas>
-        </div>
+        <canvas id="myChart"></canvas>
       </div>
       <!-- Chart -->
       <footer>
@@ -241,8 +172,8 @@
         </div>
       </footer>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
     <script src="../js/app.js"></script>
-    <script src="../js/location.js"></script>
     <script src="../js/index.js"></script>
   </body>
 </html>
