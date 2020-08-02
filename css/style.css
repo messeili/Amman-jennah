@@ -5,6 +5,7 @@
 html {
   margin: 0;
   padding: 0;
+  /* box-sizing: border-box; */
 }
 
 #container {
@@ -12,7 +13,7 @@ html {
 }
 /* Footer content */
 .mySlides::after {
-  background-image: url("../img/gradient-reversed.png");
+  background-image: url("../img/slider\ gradient.png");
   opacity: 0.6;
   content: "";
   right: 0px;
@@ -64,7 +65,8 @@ html {
   background-color: white;
 }
 
-.form-content {
+.form-content,
+#chart-content {
   /* position: fixed; */
   border: 3px solid #f1f1f1;
   z-index: 9;
@@ -223,6 +225,7 @@ legend {
   background-color: black;
   margin: 5px auto;
   font-size: 20px;
+  padding: 5px 10px;
 }
 
 #user-form input {
@@ -245,31 +248,45 @@ legend {
   margin: 0 50%;
 }
 /* Footer */
-footer {
-  padding: 20px;
-  color: white;
-  background-color: rgba(26, 23, 23, 0.842);
+/* @import url(
+  https://fonts.googleapis.com/css?family=Open + Sans:400,
+  500,
+  300,
+  700
+); */
+
+* {
+  font-family: Open Sans;
 }
 
-iframe {
+/* section {
+  width: 100%;
   display: inline-block;
-  width: 200px;
-  height: 200px;
+  background: #333;
+  height: 50vh;
   text-align: center;
-  margin-left: 375px;
-  box-shadow: 15px 15px rgba(59, 53, 53, 0.158);
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+} */
+
+.footer-distributed {
+  background: #666;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
 }
 
-.contact p {
-  margin: 20px;
-}
-
-.social {
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
   display: inline-block;
-  height: 50px;
-  width: 50px;
-  margin: 10px;
+  vertical-align: top;
 }
+
 
 .img1 {
   display: inline-block;
@@ -277,51 +294,179 @@ iframe {
   height: 150px;
   margin-left: 320px;
   
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+  width: 40%;
+
 }
 
-div .footer-section1-map {
+/* The company logo */
+
+.footer-distributed h3 {
+  color: #ffffff;
+  font: normal 36px "Open Sans", cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span {
+  color: lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
   display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+#gitHubLink {
+  text-decoration: none;
+  color: lightseagreen;
+}
+#gitHubLink:hover {
+  color: red;
 }
 
-.footer-section1 {
-  display: inline-block;
-  font-size: large;
-  margin: 10px;
-}
-.footer-section1 h1 {
-  color: rgb(56, 56, 240);
-  font-weight: bold;
-}
-.footer-section1 p,
-h1 {
-  margin: 20px;
+.footer-distributed .footer-company-name {
+  color: #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
 }
 
-.footer-bottom {
-  padding: 20px;
-  color: white;
+/* Footer Center */
+#envlop:hover {
+  color: red;
+}
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
   text-align: center;
-  background-color: rgba(0, 0, 0);
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
 }
-.footer-bottom a {
-  color: white;
-  font-size: 20px;
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 400;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: lightseagreen;
   text-decoration: none;
 }
-.footer-bottom a:hover {
-  color: blue;
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
 }
 
-.find {
-  margin-bottom: 10px;
-  font-size: xx-large;
-  color: rgb(255, 255, 255);
-  margin-left: 240px;
+.footer-distributed .footer-links .link-1:before {
+  content: none;
 }
 
-.footh1 {
-  font-size: xx-large;
-  margin: 10px;
+/* Footer Right */
+
+.footer-distributed .footer-right {
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #94999c;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+  .footer-distributed {
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
 }
 
 /* ----------------------location-section------------------------------ */
@@ -384,17 +529,17 @@ h1 {
   left: 13%;
 }
 
-/* .location-picture::after{
-  background-image: url('../img/gradient.png');
-  content: '';
+.location-picture::after {
+  background-image: url("../img/gradient.png");
+  content: "";
   right: 0px;
   top: 0;
-  border-radius: 8px;;
+  border-radius: 8px;
   bottom: 0;
   width: 100%;
   position: absolute;
   background-size: cover;
-} */
+}
 
 .location-info button {
   font-size: 15px;
@@ -452,7 +597,7 @@ h1 {
   text-align: right;
 }
 .nav-logo {
-  width: 20%;
+  width: 15%;
   text-align: left;
   display: inline-block;
   vertical-align: middle;
@@ -460,7 +605,7 @@ h1 {
   padding-bottom: 0.6%;
 }
 .nav-flag {
-  width: 18%;
+  width: 28%;
   display: inline-block;
   vertical-align: middle;
   text-align: right;
@@ -473,13 +618,13 @@ h1 {
   display: inline-block;
   text-decoration: none;
   vertical-align: middle;
-  border: 2px solid whitesmoke;
-  margin-right: 18%;
-  padding: 2%;
+  border: 2px solid #f7f4f0;
+  margin-right: 10%;
+  padding: 1%;
   border-radius: 10px;
 }
 .nav-flag li:nth-of-type(2) {
-  padding: 3%;
+  padding: 1.6%;
 }
 
 .nav-flag p {
@@ -487,20 +632,24 @@ h1 {
   vertical-align: text-top;
   display: inline-block;
   font-size: 20px;
-  color: whitesmoke;
+  color: #f7f4f0;
 }
 
 nav a {
   display: inline-block;
   margin-right: 7%;
   text-decoration: none;
-  color: white;
-  font-size: 25px;
+  color: #f7f4f0;
+  font-size: 24px;
   font-family: "Cairo", sans-serif;
   position: relative;
   text-decoration: none;
   text-align: center;
-  padding-bottom: 12px;
+  padding-bottom: 0px;
+  text-shadow: #888;
+}
+nav a:nth-last-child() {
+  padding-right: 1%;
 }
 
 nav a::before {
@@ -509,7 +658,7 @@ nav a::before {
   text-align: center;
   width: 100%;
   height: 3px;
-  bottom: 0px;
+  bottom: -10px;
   background-color: aqua;
   visibility: hidden;
   transform: scaleX(0);
@@ -522,7 +671,7 @@ nav a:hover::before {
 }
 
 #nav-items {
-  width: 60%;
+  width: 55%;
   display: inline-block;
   vertical-align: middle;
 }
@@ -531,11 +680,25 @@ nav a:hover::before {
   background-color: transparent;
   border: none;
   color: white;
-  font-size: 25px;
+  font-size: 22px;
   cursor: pointer;
+  font-family: "Cairo", sans-serif;
+}
+#loginBtn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Cairo", sans-serif;
+  /* height: 25px; */
+  padding: 0 5px;
+  letter-spacing: 5px;
+  font-weight: bold;
 }
 
-#form-container {
+#form-container,
+#chartContainer {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 4; /* Sit on top */
@@ -549,10 +712,47 @@ nav a:hover::before {
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
-#close {
+#closeform,
+#closechart {
   color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* ------------fotter2--------------- */
+.Maps {
+  width: 500px;
+  height: 260px;
+  /* text-align: center; */
+  /* display: inline-block; */
+  box-shadow: rgb(196, 193, 193) 5px 5px;
+  border: solid 1px black;
+}
+.desc-form column {
+  /* display: inline-block; */
+  float: left;
+}
+#footerAndForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  vertical-align: auto;
+}
+#Map {
+  /* height: 275px; */
+  width: 35%;
+  margin: 73px 50px 60px 200px;
+  display: flex;
+  vertical-align: baseline;
+  flex-direction: column;
+}
+/* ------------end fotter2--------------- */
+
+.opacity-img {
+  opacity: 0;
+  position: absolute;
+  z-index: 5;
 }

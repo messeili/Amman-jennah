@@ -1,7 +1,7 @@
 var slides = document.getElementsByClassName("mySlides");
 var myIndex = 0;
 var adminForm = document.getElementById("admin-form");
-var stButton = document.getElementById("static");
+var stButton = document.querySelector(".static");
 var admin = {
   userName: "admin1",
   password: "12345",
@@ -35,9 +35,10 @@ imgContainer.addEventListener("click", () => {
     localStorage.setItem("clicked", id);
   }
 });
-
+var chartContainer = document.getElementById("chartContainer");
 var formContainer = document.getElementById("form-container");
-var closeTheForm = document.getElementById("close");
+var closeTheForm = document.querySelector("#closeform");
+var closeTheChart = document.querySelector("#closechart");
 var btnCancel = document.getElementById("btn-cancel");
 function openForm() {
   formContainer.style.display = "block";
@@ -50,9 +51,13 @@ function closeForm() {
   if (
     event.target == formContainer ||
     event.target == closeTheForm ||
-    event.target == btnCancel
+    event.target == btnCancel ||
+    event.target == chartContainer ||
+    event.target == closeTheChart ||
+    event.target == window
   ) {
     formContainer.style.display = "none";
+    chartContainer.style.display = "none";
   }
 }
 
@@ -70,9 +75,7 @@ function adminValidate() {
 }
 
 stButton.addEventListener("click", function () {
-  console.log("clicked");
-
-  var div = document.getElementById("chartContainer");
-  console.log(div);
-  div.style.display = "block";
+  chartContainer.style.display = "block";
+  closeTheChart.addEventListener("click", closeForm);
+  window.addEventListener("click", closeForm);
 });

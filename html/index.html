@@ -9,9 +9,10 @@
       integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
       crossorigin="anonymous"
     />
+    <link rel="icon" href="../img/logo.png" />
     <link rel="stylesheet" href="../css/rest.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Amman Jennah</title>
+    <title>About Us</title>
   </head>
   <body>
     <!-- Nav Bar begins -->
@@ -19,18 +20,20 @@
       <div id="nav-container">
         <nav>
           <div class="nav-logo">
-            <img src="../img/logo.png" alt="logo" />
+            <img src="../img/logo-w.png" alt="logo" />
           </div>
           <div id="nav-items">
             <a href="../html/index.html">Home</a>
-            <a href="../html/index.html">About</a>
+            <a href="../html/aboutus.html">About</a>
             <a href="#location-container">Locations</a>
             <a href="#contact-us">Contact Us</a>
             <a><button class="static">Statistics</button></a>
           </div>
           <div class="nav-flag">
             <li>
-              <button class="static" onclick="openForm()">Login</button>
+              <button class="static" id="loginBtn" onclick="openForm()">
+                Login
+              </button>
             </li>
             <li>
               <img src="../img/jordan flag.png" alt="" />
@@ -46,12 +49,12 @@
     <section id="container">
       <!-- Slider Start -->
       <!-- Just add the pictuers it will work alone -->
-      <div class="mySlides" style="display: block;">
+      <!-- <div class="mySlides" style="display: block;">
         <img src="../img/car-1.jpg" alt="" />
         <div class="mySlides-para">
           <h3>Hussein Public Parks</h3>
         </div>
-      </div>
+      </div> -->
       <div class="mySlides" style="display: none;">
         <img src="../img/rayyan-1.jpg" alt="" />
         <div class="mySlides-para">
@@ -76,7 +79,7 @@
       <!-- Admin form -->
       <div id="form-container">
         <div class="form-content" id="myForm">
-          <span id="close">&times;</span>
+          <span id="closeform">&times;</span>
           <form
             id="admin-form"
             action="../html/admin.html"
@@ -101,57 +104,67 @@
       <!-- Location Section begins -->
       <div id="location-container" class="location-container-one">
         <div class="location-picture column">
-          <!-- Image of the location -->
-          <a href="../html/location.html"
+          <!-- Hidden Image for the link -->
+          <a class="opacity-img" href="../html/location.html"
             ><img src="../img/sheta-2.jpg" alt="sheta@0"
           /></a>
+          <!-- Image of the location -->
+          <img src="../img/sheta-2.jpg" />
+          <!-- Here is the infromation about the location -->
           <div class="location-info">
-            <!-- Here is the infromation about the location -->
             <img src="../img/pin.png" alt="sheta@0" />
             <h3>THE WINTER VALLY</h3>
           </div>
         </div>
         <div class="location-picture">
-          <!-- Image of the location -->
-          <a href="../html/location.html"
+          <!-- Hidden Image for the link -->
+          <a class="opacity-img" href="../html/location.html"
             ><img src="../img/bahat-2.jpg" alt="bahat@1"
           /></a>
+          <!-- Image of the location -->
+          <img src="../img/bahat-2.jpg" />
+          <!-- Here is the infromation about the location -->
           <div class="location-info">
-            <!-- Here is the infromation about the location -->
-            <img src="../img/pin.png" alt="bahat@1" />
+            <img src="../img/pin.png" />
             <h3>AL-BAHHATH SPRING</h3>
           </div>
         </div>
         <div class="location-picture column">
-          <a href="../html/location.html"
+          <!-- Hidden Image for the link -->
+          <a class="opacity-img" href="../html/location.html"
             ><img src="../img/car-2.jpg" alt="car@2"
           /></a>
           <!-- Image of the location -->
+          <img src="../img/car-2.jpg" />
+          <!-- Here is the infromation about the location -->
           <div class="location-info">
-            <!-- Here is the infromation about the location -->
-            <img src="../img/pin.png" alt="car@2" />
+            <img src="../img/pin.png" />
             <h3>ROYAL Car MUSEUM</h3>
           </div>
         </div>
         <div class="location-picture column">
-          <a href="../html/location.html"
-            ><img src="../img/sadTalal-1.jpg" alt="sadTalal@3"
+          <!-- Hidden Image for the link -->
+          <a class="opacity-img" href="../html/location.html"
+            ><img src="../img/sheta-2.jpg" alt="sadTalal@3"
           /></a>
-          <!-- Image of the location -->
+          <!-- Here is the infromation about the location -->
+          <img src="../img/sadTalal-1.jpg" />
+          <!-- Here is the infromation about the location -->
           <div class="location-info">
-            <!-- Here is the infromation about the location -->
-            <img src="../img/pin.png" alt="sadTalal@3" />
+            <img src="../img/pin.png" />
             <h3>King Talal Dam</h3>
           </div>
         </div>
         <div class="location-picture column">
-          <a href="../html/location.html"
-            ><img src="../img/rayyan-1.jpg" alt="rayyan@4"
+          <!-- Hidden Image for the link -->
+          <a class="opacity-img" href="../html/location.html"
+            ><img src="../img/sheta-2.jpg" alt="rayyan@4"
           /></a>
           <!-- Image of the location -->
+          <img src="../img/rayyan-1.jpg" />
+          <!-- Here is the infromation about the location -->
           <div class="location-info">
-            <!-- Here is the infromation about the location -->
-            <img src="../img/pin.png" alt="rayyan@4" />
+            <img src="../img/pin.png" />
             <h3>Alrayyan Vally</h3>
           </div>
         </div>
@@ -160,71 +173,59 @@
       <!-- Chart -->
 
       <div id="chartContainer" style="display: none;">
-        <canvas id="myChart"></canvas>
+        <div id="chart-content">
+          <span id="closechart">&times;</span>
+          <canvas id="myChart"></canvas>
+        </div>
       </div>
       <!-- Chart -->
-      <footer>
-        <div class="footer-content">
-          <div class="footer-section1">
-            <h1 class="footh1">Amman-Jannah</h1>
+      <footer class="footer-distributed">
+        <div class="footer-left">
+          <h3>Amman<span>Jannah</span></h3>
+
+          <p class="footer-links">
+            <a href="#" class="link-1">Home</a>
+
+            <a href="#">About</a>
+
+            <a href="#">Contact</a>
+          </p>
+
+          <a id="gitHubLink" href="https://github.com/tetra-team/Amman-jennah">
+            Tetra Team © 2020</a
+          >
+        </div>
+
+        <div class="footer-center">
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p>Amman, Jordan, Airport st</p>
+          </div>
+
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+962799-9999-99</p>
+          </div>
+
+          <div>
+            <i class="fa fa-envelope"></i>
             <p>
-              Contact Information:
+              <a id="envlop" href="mailto:Info@tetra.com">Info@Tetra.com</a>
             </p>
-            <div class="contact">
-              <p>+962-7999-9999-99</p>
-              <p>&nbsp; info@Tetra.com</p>
-            </div>
-            <div>
-              <a class="b" href="https://facebook.com"
-                ><img
-                  class="social"
-                  src="https://cdn2.iconfinder.com/data/icons/social-media-2199/64/social_media_isometric_1-facebook-512.png"
-                  alt=""
-              /></a>
-
-              <a class="b" href="https://twitter.com"
-                ><img
-                  class="social"
-                  src="https://cdn2.iconfinder.com/data/icons/social-media-2199/64/social_media_isometric_6-twitter-512.png"
-                  alt=""
-              /></a>
-
-              <a class="b" href="https://youtube.com"
-                ><img
-                  class="social"
-                  src="https://cdn2.iconfinder.com/data/icons/social-media-2199/64/social_media_isometric_2-youtube-512.png"
-                  alt=""
-              /></a>
-            </div>
-          </div>
-          <div class="footer-section1-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.319914211971!2d35.8663810146408!3d31.897904135594967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca6e3c8e41335%3A0x38b7f4b7f0dc25d0!2sLuminus%20College!5e0!3m2!1sen!2sjo!4v1587282960933!5m2!1sen!2sjo"
-              width="400"
-              height="300"
-              frameborder="0"
-              allowfullscreen=""
-              aria-hidden="false"
-              tabindex="0"
-            ></iframe>
-          </div>
-          <div class="footer-section1">
-            <h3 class="find">Download the application</h3>
-            <div class="apps">
-              <a href=""
-                ><img
-                  class="img1"
-                  src="https://3.bp.blogspot.com/-zxXOgeQ5-0A/XD5vwB4CtTI/AAAAAAAAG4c/fFMrXH-ZFZkkVlzkgB6dvRJMUwfDgACWACK4BGAYYCw/s640/Icons%2BApp%2BStore%2BGoogle%2Bplay.png"
-                  alt="app store"
-                />
-              </a>
-            </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          <a href="https://github.com/tetra-team/Amman-jennah"
-            >2020@Tetra Team.com</a
-          >
+
+        <div id="fotter-map" class="footer-right">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.320081793257!2d35.86638101511512!3d31.897899581246396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca6e3c8e41335%3A0x38b7f4b7f0dc25d0!2sLuminus%20Technical%20University%20College!5e0!3m2!1sen!2sjo!4v1596202862008!5m2!1sen!2sjo"
+            width="300"
+            height="200"
+            frameborder="0"
+            style="border: 0;"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
         </div>
       </footer>
     </section>
