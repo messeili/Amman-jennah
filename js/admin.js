@@ -4,8 +4,9 @@ var tbody = document.querySelector("tbody");
 var select = document.querySelector("select");
 var selectBtn = document.getElementById("admin-select");
 var locName = document.getElementById("location-name");
-console.log(locName);
+var addForm = document.getElementById("addLocation");
 var locationsArray = JSON.parse(localStorage.getItem("locations"));
+console.log(locationsArray);
 
 function generateHeader() {
   var theadInfo = `
@@ -18,27 +19,6 @@ function generateHeader() {
     `;
   thead.innerHTML = theadInfo;
 }
-
-// function generateTableBody() {
-//   var trow = "";
-//   for (var i = 0; i < locationsArray.length; i++) {
-//     var tempArr = JSON.parse(localStorage.getItem(locationNames[i]));
-//     if (tempArr == null) {
-//       continue;
-//     } else {
-//       for (var j = 0; j < tempArr.length; j++) {
-//         trow = `
-//                       <td>${locationNames[i]}</td>
-//                       <td>${tempArr[j].name}</td>
-//                       <td>${tempArr[j].date}</td>
-//                       <td>${tempArr[j].numberOfVisitors}</td>
-
-//                   `;
-//         tbody.innerHTML += trow;
-//       }
-//     }
-//   }
-// }
 
 generateHeader();
 
@@ -77,3 +57,33 @@ selectBtn.addEventListener("click", function () {
     }
   }
 });
+
+addForm.addEventListener("submit", function () {
+  event.preventDefault();
+  var locationName = document.getElementById("locationName");
+  var allImages = document.getElementById("mainImage");
+  var description = document.getElementById("locationDesc");
+  var map = document.getElementById("locationMap");
+  var allImgesArray = createURL(allImages.files);
+  new Locations(
+    locationName.value,
+    allImgesArray[0],
+    allImgesArray.slice(1),
+    description.value,
+    map.value
+  );
+
+  localStorage.setItem("locations", JSON.stringify(Locations.all));
+  locationName.value = "";
+  allImages.value = "";
+  description.value = "";
+  map.value = "";
+});
+
+function createURL(array) {
+  var tempArray = [];
+  for (let index = 0; index < array.length; index++) {
+    tempArray.push(URL.createObjectURL(array[index]));
+  }
+  return tempArray;
+}

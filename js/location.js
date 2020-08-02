@@ -13,7 +13,7 @@ function generateImages() {
   for (var i = 0; i < imagesContainer.length; i++) {
     for (var j = 0; j < imagesContainer[i].children.length; j++) {
       var oldImage = imagesContainer[i].children[j].attributes[0];
-      var newImage = `../img/${locationsArray[clickedLocation].pathArr[counter]}`;
+      var newImage = `${locationsArray[clickedLocation].pathArr[counter]}`;
       oldImage.value = newImage;
       counter++;
     }

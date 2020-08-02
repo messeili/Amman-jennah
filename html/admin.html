@@ -53,39 +53,44 @@
       <div id="form-container">
         <fieldset>
           <legend>Add Location</legend>
+          <form id="addLocation">
           <label for="locationname">Location Name</label>
           <input
             type="text"
             id="locationName"
             name="locationName"
             placeholder="Location Name"
+            required
           />
-          <label for="mainImage">Main Image</label>
+          <label for="mainImage">Location Images</label>
+          <em>Please Enter 5 Images</em>
           <input
-            type="text"
+            type="file"
             id="mainImage"
             name="mainImage"
             placeholder="image url"
+            multiple
+            accept="image/*"
+            required
           />
           <!-- <input type="file" placeholder="Image file" /> -->
-          <label for="mImages"
-            >Multible Images <span> Enter 4 images </span></label
-          >
-          <input type="text" id="mImages" name="mImages" />
-          <input type="text" id="mImages" name="mImages" />
-          <input type="text" id="mImages" name="mImages" />
-          <input type="text" id="mImages" name="mImages" />
           <label for="locationDesc">Location Descritption</label>
           <textarea
             name="locationDesc"
             id="locationDesc"
             cols="30%"
             rows="5"
+            required
           ></textarea>
           <label for="locationMap">Location Map</label>
-          <input type="text" id="locationMap" name="locationMap" />
+          <input type="text" id="locationMap" name="locationMap" required />
           <input type="submit" value="Add" />
         </fieldset>
+      </form>
+      </div>
+
+      <div id="test-div">
+        
       </div>
     </section>
 
