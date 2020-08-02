@@ -170,7 +170,7 @@ h2 {
   line-height: 2;
   font-size: 20px;
   margin: 0 0 15px 15px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .desc-img-container {
@@ -287,10 +287,19 @@ legend {
   vertical-align: top;
 }
 
+
+.img1 {
+  display: inline-block;
+  width: 200px;
+  height: 150px;
+  margin-left: 320px;
+  
+
 /* Footer left */
 
 .footer-distributed .footer-left {
   width: 40%;
+
 }
 
 /* The company logo */

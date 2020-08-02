@@ -37,7 +37,19 @@ var paragArray = [
   `<p>Wadi Al-Sheta is a winding valley located in Wadi Al-Seer district within the Amman Governorate, and it is a valley connecting the Iraq al-Amir region (from the west) and Marj Al-Hamam region (from the east).</p>
   <p> The area is characterized by valleys and hills overlooking the Dead Sea and the city of Jerusalem, with its spring weather and mild winters, and is located 13 km from the seventh circle at the foot of the valley within a land area of 50 dunums planted with vegetables and fruit trees and interspersed with fresh water springs and an area has been prepared for walking and hiking through trees.</p>
   <p> In general, the area is characterized by fresh air and a calm atmosphere, which gives psychological and physical comfort to the resident, as the place provides all means of recovery and recuperation.</p>`,
-  "second location paragraph",
+  `<p> 
+   Wadi Al-Bahath is a very steep valley, meaning itS
+   waters descend with a rumble, because the difference 
+   in height between its beginning and its end
+   is more than 500 meters, and the one standing on 
+   one side of the Wadi Al-Bahath sees a twisting path 
+   that descends and then ascends and witnesses the 
+   deep chasm caused by the earthquakes in distant times. 
+   In spite of the ruggedness and horror of that 
+   region, its nature has a magnificence and prestige 
+   that evokes in itself deep feelings of respect for 
+   the mother’s nature 
+  </p>`,
   `<p>Located next to the Al Hussein Public Parks, the museum was established in 2003 upon King Abdullah's wishes. The museum showcases a rare collection of Jordan's vehicles ranging from Hussein bin Ali's cars that came to Amman in 1916 to modern sports cars.</p> 
   <p>The museum has the rover used in filming of Hollywood's movie The Martian, which used Jordan's UNESCO world heritage site Wadi Rum as the backdrop for the Martian scenes. The rover was gifted to Jordan in return for the hospitality with which Jordan received the movie cast and crew.</p>
   <p>There is a plethora of motorcycles, as <b>King Hussein</b> and his son, the current King Abdullah II, were motorcycle enthusiasts, many of which are rare examples of vintage US and British bikes in pristine condition.</p>
@@ -49,8 +61,19 @@ var paragArray = [
     <li> <a href="https://www.facebook.com/TheRoyalAutomobileMuseumJordan/photos/a.275438299202251/1851794278233304/?type=3&theater" target="_blank">Aston martin db5 1963</a>  </li>
   </ol> 
   `,
-  "fourth location paragraph",
-  "fifth location paragraph",
+  `<p> 
+  King Talal Dam is the largest dam in Jordan, located 
+  in the Tal Al Rumman Heights area in Jerash Governorate. 
+  The type of dam is rocky. Its water is used for irrigation and to generate electricity. 
+  Its storage capacity is 75 million m3. The King Talal Dam contributed
+  to raising the storage of water quantities in the dams of 
+  the Kingdom to 136 million cubic meters, was established in 1977 at an 
+  estimated cost of 34 million Jordanian dinars, and the type of dam is rocky.  
+  
+  </p> `,
+  `<p> Al-Rayyan Vally Reserve is located in the southwestern part of the Fayoum Governorate. Wadi Al Rayyan consists of the upper lake, the lower lake, the waterfalls region that connects the two lakes, the eyes of Rayyan in the south of the lower lake, the Jabal Al Rayyan area which is the area around Laayoune, and the Jabal Al-Madawra region that is near Lower Lake. Al-Rayyan Valley is distinguished by its integrated desert environment, including sand dunes, natural eyes, different botanical life, and various animal animals, as well as marine fossils, as the waterfalls area is considered one of the different marine sports areas. There are 15 types of wildlife in the reserve, the most important of them (white deer - Egypt in gazelle - fennec fox) - sand fox - wolf) There are also several types of hawks.
+  </p>`
+,
 ];
 
 //constructor
