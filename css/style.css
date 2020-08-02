@@ -168,7 +168,7 @@ h2 {
   line-height: 2;
   font-size: 20px;
   margin: 0 0 15px 15px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .desc-img-container {
@@ -276,6 +276,7 @@ iframe {
   width: 200px;
   height: 150px;
   margin-left: 320px;
+  
 }
 
 div .footer-section1-map {
