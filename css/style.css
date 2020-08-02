@@ -259,7 +259,7 @@ legend {
   font-family: Open Sans;
 }
 
-section {
+/* section {
   width: 100%;
   display: inline-block;
   background: #333;
@@ -268,7 +268,7 @@ section {
   font-size: 22px;
   font-weight: 700;
   text-decoration: underline;
-}
+} */
 
 .footer-distributed {
   background: #666;
@@ -673,6 +673,19 @@ nav a:hover::before {
   color: white;
   font-size: 22px;
   cursor: pointer;
+  font-family: "Cairo", sans-serif;
+}
+#loginBtn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Cairo", sans-serif;
+  /* height: 25px; */
+  padding: 0 5px;
+  letter-spacing: 5px;
+  font-weight: bold;
 }
 
 #form-container,
