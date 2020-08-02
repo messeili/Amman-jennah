@@ -42,7 +42,6 @@
       <div id="table-container">
         <div id="table-control">
           <select></select>
-
           <button id="admin-select">Click To generate</button>
         </div>
         <table id="locations-info">
@@ -50,6 +49,43 @@
           <thead></thead>
           <tbody></tbody>
         </table>
+      </div>
+      <div id="form-container">
+        <fieldset>
+          <legend>Add Location</legend>
+          <label for="locationname">Location Name</label>
+          <input
+            type="text"
+            id="locationName"
+            name="locationName"
+            placeholder="Location Name"
+          />
+          <label for="mainImage">Main Image</label>
+          <input
+            type="text"
+            id="mainImage"
+            name="mainImage"
+            placeholder="image url"
+          />
+          <!-- <input type="file" placeholder="Image file" /> -->
+          <label for="mImages"
+            >Multible Images <span> Enter 4 images </span></label
+          >
+          <input type="text" id="mImages" name="mImages" />
+          <input type="text" id="mImages" name="mImages" />
+          <input type="text" id="mImages" name="mImages" />
+          <input type="text" id="mImages" name="mImages" />
+          <label for="locationDesc">Location Descritption</label>
+          <textarea
+            name="locationDesc"
+            id="locationDesc"
+            cols="30%"
+            rows="5"
+          ></textarea>
+          <label for="locationMap">Location Map</label>
+          <input type="text" id="locationMap" name="locationMap" />
+          <input type="submit" value="Add" />
+        </fieldset>
       </div>
     </section>
 

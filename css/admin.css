@@ -88,7 +88,7 @@ nav a:hover::before {
 #table-container {
   width: 50%;
   justify-content: center;
-  margin: 150px auto;
+  margin: 150px auto 20px auto;
   border: 1px solid black;
   padding: 15px;
 }
@@ -129,4 +129,41 @@ table thead th {
 table tbody td {
   padding: 15px;
   border: 1px black solid;
+}
+
+/* add location form */
+
+#form-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#form-container label {
+  display: block;
+}
+
+#form-container fieldset {
+  background-color: #eeeeee;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#form-container legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+  margin: 0 auto;
+}
+
+#form-container input,
+#form-container textarea {
+  margin: 15px;
+  padding: 5px;
+  width: 75%;
+}
+
+#form-container label {
+  margin: 5px;
+  padding: 5px;
 }
