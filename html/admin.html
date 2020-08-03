@@ -65,12 +65,38 @@
           <label for="mainImage">Location Images</label>
           <em>Please Enter 5 Images</em>
           <input
-            type="file"
-            id="mainImage"
+            type="text"
+            id ="mainImage"
             name="mainImage"
             placeholder="image url"
-            multiple
-            accept="image/*"
+            required
+          />
+          <input
+            type="text"
+            id="image1"
+            name="image1"
+            placeholder="image url"
+            required
+          />
+          <input
+            type="text"
+            id="image2"
+            name="image2"
+            placeholder="image url"
+            required
+          />
+          <input
+            type="text"
+            id="image3"
+            name="image3"
+            placeholder="image url"
+            required
+          />
+          <input
+            type="text"
+            id="image4"
+            name="image4"
+            placeholder="image url"
             required
           />
           <!-- <input type="file" placeholder="Image file" /> -->
@@ -83,6 +109,7 @@
             required
           ></textarea>
           <label for="locationMap">Location Map</label>
+          <em>Please Go to google maps and get the embadded link</em>
           <input type="text" id="locationMap" name="locationMap" required />
           <input type="submit" value="Add" />
         </fieldset>

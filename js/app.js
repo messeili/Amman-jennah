@@ -84,18 +84,18 @@ function Locations(name, mainImg, pathArr, description, location) {
   this.description = description;
   this.location = location;
   this.usersArray = [];
-  Locations.all.push(this);
 }
 
 //this for loop creates objects from the consructor
 for (let index = 0; index < locationNames.length; index++) {
-  new Locations(
+  var newLocation = new Locations(
     locationNames[index],
     locationImg[index][0],
     locationImg[index],
     paragArray[index],
     map[index]
   );
+  Locations.all.push(newLocation);
 }
 
 // Store the whole array in localStorage.

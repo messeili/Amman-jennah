@@ -5,8 +5,9 @@ var select = document.querySelector("select");
 var selectBtn = document.getElementById("admin-select");
 var locName = document.getElementById("location-name");
 var addForm = document.getElementById("addLocation");
-var locationsArray = JSON.parse(localStorage.getItem("locations"));
-console.log(locationsArray);
+
+var templocationArray = JSON.parse(localStorage.getItem("locations"));
+console.log(templocationArray);
 
 function generateHeader() {
   var theadInfo = `
@@ -25,6 +26,8 @@ generateHeader();
 optionsNames();
 
 function optionsNames() {
+  select.innerHTML = "";
+  var locationsArray = JSON.parse(localStorage.getItem("locations"));
   for (var i = 0; i < locationsArray.length; i++) {
     var option = document.createElement("option");
     option.setAttribute("value", locationsArray[i].name);
@@ -60,30 +63,36 @@ selectBtn.addEventListener("click", function () {
 
 addForm.addEventListener("submit", function () {
   event.preventDefault();
+  var imageArr = [];
   var locationName = document.getElementById("locationName");
-  var allImages = document.getElementById("mainImage");
+  var mainImage = document.getElementById("mainImage");
+  var image1 = document.getElementById("image1");
+  var image2 = document.getElementById("image2");
+  var image3 = document.getElementById("image3");
+  var image4 = document.getElementById("image4");
+  imageArr.push(image1.value);
+  imageArr.push(image2.value);
+  imageArr.push(image3.value);
+  imageArr.push(image4.value);
   var description = document.getElementById("locationDesc");
   var map = document.getElementById("locationMap");
-  var allImgesArray = createURL(allImages.files);
-  new Locations(
+  var adminNewLlocation = new Locations(
     locationName.value,
-    allImgesArray[0],
-    allImgesArray.slice(1),
+    mainImage.value,
+    imageArr,
     description.value,
     map.value
   );
+  templocationArray.push(adminNewLlocation);
+  localStorage.setItem("locations", JSON.stringify(templocationArray));
 
-  localStorage.setItem("locations", JSON.stringify(Locations.all));
   locationName.value = "";
-  allImages.value = "";
+  mainImage.value = "";
+  image1.value = "";
+  image2.value = "";
+  image3.value = "";
+  image4.value = "";
   description.value = "";
   map.value = "";
+  optionsNames();
 });
-
-function createURL(array) {
-  var tempArray = [];
-  for (let index = 0; index < array.length; index++) {
-    tempArray.push(URL.createObjectURL(array[index]));
-  }
-  return tempArray;
-}
