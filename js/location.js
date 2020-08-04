@@ -57,7 +57,7 @@ function loadLocationArray() {
 }
 
 function loadArary() {
-  Locations.all[clickedLocation].usersArray =
+  locationsArray[clickedLocation].usersArray =
     JSON.parse(localStorage.getItem(locationsArray[clickedLocation].name)) ||
     [];
 }
@@ -84,10 +84,10 @@ formSubmit.addEventListener("submit", function () {
   var numberValue = numberOfVisitors.value;
 
   var Info = new FormInfo(nameValue, dateValue, numberValue);
-  Locations.all[clickedLocation].usersArray.push(Info);
+  locationsArray[clickedLocation].usersArray.push(Info);
   localStorage.setItem(
-    Locations.all[clickedLocation].name,
-    JSON.stringify(Locations.all[clickedLocation].usersArray)
+    locationsArray[clickedLocation].name,
+    JSON.stringify(locationsArray[clickedLocation].usersArray)
   );
   name.value = "";
   date.value = "";

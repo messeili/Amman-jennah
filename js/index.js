@@ -7,7 +7,7 @@ var imgContainer = document.getElementById("location-container");
 var chart = document.getElementById("chartContainer");
 var ctx = document.getElementById("myChart");
 var locationsArray = JSON.parse(localStorage.getItem("locations"));
-var newNames=[];
+var newNames = [];
 
 stButton.addEventListener("click", generate);
 ctx.addEventListener("click", () => {
@@ -138,6 +138,8 @@ function getNumberOfVisitors() {
     }
     sumArr.push(sumOfNumbers);
   }
+  console.log(locationsArray.length);
+  console.log(sumArr);
 }
 
 function getRandomColor() {
@@ -152,12 +154,10 @@ function getRandomColor() {
   }
 }
 
-function getNames(){
-
-  newNames=[];
-  for (let index = 0; index <locationsArray.length; index++) {
+function getNames() {
+  newNames = [];
+  for (let index = 0; index < locationsArray.length; index++) {
     newNames.push(locationsArray[index].name);
-    
   }
 }
 
