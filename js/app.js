@@ -84,6 +84,7 @@ function Locations(name, mainImg, pathArr, description, location) {
   this.description = description;
   this.location = location;
   this.usersArray = [];
+  this.userRevew = [];
 }
 
 //this for loop creates objects from the consructor
@@ -110,4 +111,9 @@ function FormInfo(name, date, numberOfVisitors) {
   this.name = name;
   this.date = date;
   this.numberOfVisitors = numberOfVisitors;
+}
+
+function UserRevew(review, comment) {
+  this.review = review;
+  this.comment = comment;
 }

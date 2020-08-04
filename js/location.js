@@ -9,6 +9,9 @@ var counter = 0;
 var imagesContainer = document.getElementsByClassName("images");
 var ctx = document.getElementById("myChart");
 
+var reviewButton = document.getElementById("revire-button");
+reviewButton.addEventListener("click", fun1);
+
 function generateImages() {
   for (var i = 0; i < imagesContainer.length; i++) {
     for (var j = 0; j < imagesContainer[i].children.length; j++) {
@@ -90,3 +93,46 @@ formSubmit.addEventListener("submit", function () {
   date.value = "";
   numberOfVisitors.value = "";
 });
+
+function fun1() {
+  locationsArray = JSON.parse(localStorage.getItem("locations"));
+  var select = document.getElementById("review-values").value;
+  var para = document.getElementById("para").value;
+  var newReview = new UserRevew(select, para);
+  locationsArray[clickedLocation].userRevew.push(newReview);
+  localStorage.setItem("locations", JSON.stringify(locationsArray));
+  select = "";
+  para = "";
+  revewData();
+}
+
+revewData();
+
+function revewData() {
+  var reviewUserData = document.getElementById("review-users");
+  reviewUserData.innerHTML = "";
+  locationsArray = JSON.parse(localStorage.getItem("locations"));
+  var tempArray = locationsArray[clickedLocation].userRevew;
+  if (tempArray.length == 0) {
+    reviewUserData.style.display = "none";
+  } else {
+    reviewUserData.style.display = "block";
+    var sum = 0;
+    for (var i = 1; i <= tempArray.length; i++) {
+      sum += parseInt(tempArray[i - 1].review);
+      var usersData = `
+      <div class="user-review-data">
+      <p><i class="fa fa-user-circle" aria-hidden="true"></i> User ${i} </p>
+      <p>Review is ${tempArray[i - 1].review} of 5</p>
+      <p>${tempArray[i - 1].comment}</p>
+      </div>
+    `;
+      reviewUserData.innerHTML += usersData;
+    }
+    var avg = sum / tempArray.length;
+    var sumAdding = `
+      <h3>Rating ${avg.toFixed(2)} of 5 </h3>
+    `;
+    reviewUserData.innerHTML += sumAdding;
+  }
+}
