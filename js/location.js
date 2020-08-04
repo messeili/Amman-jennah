@@ -10,7 +10,7 @@ var imagesContainer = document.getElementsByClassName("images");
 var ctx = document.getElementById("myChart");
 
 var reviewButton = document.getElementById("revire-button");
-reviewButton.addEventListener("click", fun1);
+reviewButton.addEventListener("click", userReview);
 
 function generateImages() {
   for (var i = 0; i < imagesContainer.length; i++) {
@@ -94,7 +94,7 @@ formSubmit.addEventListener("submit", function () {
   numberOfVisitors.value = "";
 });
 
-function fun1() {
+function userReview() {
   locationsArray = JSON.parse(localStorage.getItem("locations"));
   var select = document.getElementById("review-values").value;
   var para = document.getElementById("para").value;
