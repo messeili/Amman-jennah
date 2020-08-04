@@ -6,6 +6,7 @@ var chartContainer = document.getElementById("chartContainer");
 var locationsArray = JSON.parse(localStorage.getItem("locations"));
 
 var counter = 0;
+var tempArray = [];
 var imagesContainer = document.getElementsByClassName("images");
 var ctx = document.getElementById("myChart");
 
@@ -57,9 +58,13 @@ function loadLocationArray() {
 }
 
 function loadArary() {
+  tempArray = [];
   locationsArray[clickedLocation].usersArray =
     JSON.parse(localStorage.getItem(locationsArray[clickedLocation].name)) ||
     [];
+
+  tempArray = locationsArray[clickedLocation].usersArray;
+  console.log(tempArray);
 }
 
 function generate() {
@@ -84,10 +89,11 @@ formSubmit.addEventListener("submit", function () {
   var numberValue = numberOfVisitors.value;
 
   var Info = new FormInfo(nameValue, dateValue, numberValue);
-  locationsArray[clickedLocation].usersArray.push(Info);
+  tempArray.push(Info);
+  console.log(tempArray);
   localStorage.setItem(
     locationsArray[clickedLocation].name,
-    JSON.stringify(locationsArray[clickedLocation].usersArray)
+    JSON.stringify(tempArray)
   );
   name.value = "";
   date.value = "";
