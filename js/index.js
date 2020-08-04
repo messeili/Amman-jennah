@@ -7,6 +7,7 @@ var imgContainer = document.getElementById("location-container");
 var chart = document.getElementById("chartContainer");
 var ctx = document.getElementById("myChart");
 var locationsArray = JSON.parse(localStorage.getItem("locations"));
+var newNames=[];
 
 stButton.addEventListener("click", generate);
 ctx.addEventListener("click", () => {
@@ -151,13 +152,23 @@ function getRandomColor() {
   }
 }
 
+function getNames(){
+
+  newNames=[];
+  for (let index = 0; index <locationsArray.length; index++) {
+    newNames.push(locationsArray[index].name);
+    
+  }
+}
+
 function generateChartMain() {
   getRandomColor();
+  getNames();
 
   var myChart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: locationNames,
+      labels: newNames,
       datasets: [
         {
           label: "locationName",
