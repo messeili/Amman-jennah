@@ -84,10 +84,45 @@ nav a:hover::before {
   vertical-align: middle;
 }
 
+/* Container */
+#container {
+  width: 100%;
+}
+
+#table-container {
+  width: 50%;
+  justify-content: center;
+  margin: 150px auto 20px auto;
+  border: 1px solid black;
+  padding: 15px;
+}
+
+#table-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px;
+  justify-content: space-evenly;
+}
+
+#table-control button {
+  padding: 5px;
+  font-size: 15px;
+  color: black;
+  border-radius: 25%;
+  box-shadow: 5px 5px #000000;
+}
+
+#location-name {
+  text-align: center;
+  margin: 15px;
+  text-transform: capitalize;
+}
+
 /* Table */
 
 table {
-  margin: 150px 15px;
+  margin: 0px auto;
 }
 
 table thead th {
@@ -98,4 +133,47 @@ table thead th {
 table tbody td {
   padding: 15px;
   border: 1px black solid;
+}
+
+/* add location form */
+
+#form-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#form-container label {
+  display: block;
+}
+
+#form-container fieldset {
+  background-color: #eeeeee;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#form-container legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+  margin: 0 auto;
+}
+
+#form-container input,
+#form-container textarea {
+  margin: 15px;
+  padding: 5px;
+  width: 75%;
+}
+
+#form-container label {
+  margin: 5px;
+  padding: 5px;
+}
+
+#form-container em {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: red;
 }

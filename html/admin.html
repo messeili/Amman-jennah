@@ -38,10 +38,89 @@
       </div>
     </header>
     <!-- Nav Bar Ends -->
-    <table id="locations-info">
-      <thead></thead>
-      <tbody></tbody>
-    </table>
+
+    <section id="container">
+      <div id="table-container">
+        <div id="table-control">
+          <select></select>
+          <button id="admin-select">Click To generate</button>
+        </div>
+        <table id="locations-info">
+          <p id="location-name"></p>
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div id="form-container">
+        <fieldset>
+          <legend>Add Location</legend>
+          <form id="addLocation">
+          <label for="locationname">Location Name</label>
+          <input
+            type="text"
+            id="locationName"
+            name="locationName"
+            placeholder="Location Name"
+            required
+          />
+          <label for="mainImage">Location Images</label>
+          <em>Please Enter 5 Images</em>
+          <input
+            type="text"
+            id ="mainImage"
+            name="mainImage"
+            placeholder="image url"
+            required
+          />
+          <input
+            type="text"
+            id="image1"
+            name="image1"
+            placeholder="image url"
+            required
+          />
+          <input
+            type="text"
+            id="image2"
+            name="image2"
+            placeholder="image url"
+            required
+          />
+          <input
+            type="text"
+            id="image3"
+            name="image3"
+            placeholder="image url"
+            required
+          />
+          <input
+            type="text"
+            id="image4"
+            name="image4"
+            placeholder="image url"
+            required
+          />
+          <!-- <input type="file" placeholder="Image file" /> -->
+          <label for="locationDesc">Location Descritption</label>
+          <textarea
+            name="locationDesc"
+            id="locationDesc"
+            cols="30%"
+            rows="5"
+            required
+          ></textarea>
+          <label for="locationMap">Location Map</label>
+          <em>Please Go to google maps and get the embadded link</em>
+          <input type="text" id="locationMap" name="locationMap" required />
+          <input type="submit" value="Add" />
+        </fieldset>
+      </form>
+      </div>
+
+      <div id="test-div">
+        
+      </div>
+    </section>
 
     <script src="../js/app.js"></script>
     <script src="../js/admin.js"></script>

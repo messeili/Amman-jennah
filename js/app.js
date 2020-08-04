@@ -20,17 +20,40 @@ var map = [
 
 //this array contains the nextention names for each image
 var locationImg = [
-  ["sheta-1.jpg", "sheta-2.jpg", "sheta-3.jpg", "sheta-4.jpg", "sheta-5.jpg"],
-  ["bahat-1.jpg", "bahat-2.jpg", "bahat-3.jpg", "bahat-4.jpg", "bahat-5.jpg"],
-  ["car-1.jpg", "car-2.jpg", "car-3.jpg", "car-4.jpg", "car-5.jpg"],
   [
-    "sadTalal-1.jpg",
-    "sadTalal-2.jpg",
-    "sadTalal-3.jpg",
-    "sadTalal-4.jpg",
-    "sadTalal-5.jpg",
+    "../img/sheta-1.jpg",
+    "../img/sheta-2.jpg",
+    "../img/sheta-3.jpg",
+    "../img/sheta-4.jpg",
+    "../img/sheta-5.jpg",
   ],
-  ["rayyan-1.jpg", "rayyan-2.jpg", "rayyan-3.jpg", "rayyan-4.jpg"],
+  [
+    "../img/bahat-1.jpg",
+    "../img/bahat-2.jpg",
+    "../img/bahat-3.jpg",
+    "../img/bahat-4.jpg",
+    "../img/bahat-5.jpg",
+  ],
+  [
+    "../img/car-1.jpg",
+    "../img/car-2.jpg",
+    "../img/car-3.jpg",
+    "../img/car-4.jpg",
+    "../img/car-5.jpg",
+  ],
+  [
+    "../img/sadTalal-1.jpg",
+    "../img/sadTalal-2.jpg",
+    "../img/sadTalal-3.jpg",
+    "../img/sadTalal-4.jpg",
+    "../img/sadTalal-5.jpg",
+  ],
+  [
+    "../img/rayyan-1.jpg",
+    "../img/rayyan-2.jpg",
+    "../img/rayyan-3.jpg",
+    "../img/rayyan-4.jpg",
+  ],
 ];
 //this  array contains locations description
 var paragArray = [
@@ -79,30 +102,41 @@ var paragArray = [
 //constructor
 function Locations(name, mainImg, pathArr, description, location) {
   this.name = name;
-  this.mainImg = `../img/${mainImg}`;
+  this.mainImg = mainImg;
   this.pathArr = pathArr;
   this.description = description;
   this.location = location;
   this.usersArray = [];
-  Locations.all.push(this);
+  this.userRevew = [];
 }
 
 //this for loop creates objects from the consructor
 for (let index = 0; index < locationNames.length; index++) {
-  new Locations(
+  var newLocation = new Locations(
     locationNames[index],
     locationImg[index][0],
     locationImg[index],
     paragArray[index],
     map[index]
   );
+  Locations.all.push(newLocation);
 }
-console.log(Locations.all);
 
-console.log(Locations.all[0].pathArr);
+// Store the whole array in localStorage.
+
+var locationArray = JSON.parse(localStorage.getItem("locations"));
+console.log(locationArray);
+if (locationArray == null) {
+  localStorage.setItem("locations", JSON.stringify(Locations.all));
+}
 
 function FormInfo(name, date, numberOfVisitors) {
   this.name = name;
   this.date = date;
   this.numberOfVisitors = numberOfVisitors;
+}
+
+function UserRevew(review, comment) {
+  this.review = review;
+  this.comment = comment;
 }
