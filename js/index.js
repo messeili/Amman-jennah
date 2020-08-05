@@ -166,7 +166,7 @@ function generateChartMain() {
   getNames();
 
   var myChart = new Chart(ctx, {
-    type: "bar",
+    type: "pie",
     data: {
       labels: newNames,
       datasets: [

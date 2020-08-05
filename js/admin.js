@@ -5,6 +5,7 @@ var select = document.querySelector("select");
 var selectBtn = document.getElementById("admin-select");
 var locName = document.getElementById("location-name");
 var addForm = document.getElementById("addLocation");
+var userMassage = document.getElementById("user-massage");
 
 var templocationArray = JSON.parse(localStorage.getItem("locations"));
 console.log(templocationArray);
@@ -94,5 +95,7 @@ addForm.addEventListener("submit", function () {
   image4.value = "";
   description.value = "";
   map.value = "";
+  userMassage.textContent = "Your location has been added";
+   userMassage.style.color = "green"; 
   optionsNames();
 });

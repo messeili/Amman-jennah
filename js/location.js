@@ -4,6 +4,7 @@ var formSubmit = document.querySelector("form");
 var chartContainer = document.getElementById("chartContainer");
 
 var locationsArray = JSON.parse(localStorage.getItem("locations"));
+var userMass = document.getElementById("user-mess");
 
 var counter = 0;
 var tempArray = [];
@@ -98,6 +99,8 @@ formSubmit.addEventListener("submit", function () {
   name.value = "";
   date.value = "";
   numberOfVisitors.value = "";
+  userMass.textContent = "Your information has been registered";
+  userMass.style.color = "green";
 });
 
 function userReview() {
