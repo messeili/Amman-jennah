@@ -219,7 +219,7 @@ legend {
   margin: 0 auto;
 }
 #submitBtn {
-  width: 50% !important;
+  width: 50%;
   display: inline-block;
   text-align: center !important;
   color: white;
@@ -796,8 +796,8 @@ nav a:hover::before {
 }
 
 #review-section button {
-  color: black;
-  background-color: rgb(17, 0, 255);
+  color: white;
+  background-color: black;
   padding: 5px;
   font-size: 20px;
   border-radius: 25%;
